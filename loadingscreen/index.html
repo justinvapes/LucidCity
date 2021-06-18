@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="keks.css">
+    </head>
+
+    <body>
+
+        <div id="particle"></div>
+
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="config.js"></script>
+
+        <h1 id="logo" style="color: transparent"><strong style="color: transparent"></strong></h1>
+
+
+        <div class="discord">
+            <a id="discordText" class="discordTextBack">Discord.gg/lucidcity</a>
+            <p class="discordIcon" style="background-color: #320086; border: 0; outline: 0; border-top-left-radius: 10px; border-bottom-left-radius: 10px;"></p>
+            <img class="discordPictureReal" src="https://thesilphroad.com/img/icons/discord.png">
+        </div>
+
+        <div class="website">
+            <a id="websiteText" class="websiteTextBack">https://lucidcityrp.com/</a>
+            <p class="websiteIcon" style="background-color: #320086; border: 0; outline: 0; border-top-left-radius: 10px; border-bottom-left-radius: 10px;"></p>
+            <img class="websitePictureReal" src="https://www.nicepng.com/png/full/803-8033768_web-messenger-globe-icon-white-on-black.png">
+        </div>
+
+        <img style="
+        width: 100%;
+        height: 100%; 
+        background-image: url(LC.gif);
+		background-size: cover;
+        background-repeat: no-repeat;
+		background-position: center;
+		filter:brightness(100%); 
+        z-index: 9;">
+        
+        <script type="text/javascript">
+function play()
+{
+var a = Math.random()*5;
+a=Math.floor(a);
+
+if(a==4)
+{
+document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='music/music5.ogg' type='audio/ogg'></audio>";
+}
+if(a==3)
+{
+document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='music/music4.ogg' type='audio/ogg'></audio>";
+}
+if(a==2)
+{
+document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='music/music3.ogg' type='audio/ogg'></audio>";
+}
+
+if(a==1)
+{
+document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='music/music2.ogg' type='audio/ogg'></audio>";
+}
+if(a==0)
+{
+document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='music/music1.ogg' type='audio/ogg'></audio>";
+}
+}
+</script>
+
+    </head>
+    <body onload="play()">
+    <div id="soundtrack">
+
+    </div>
+    </body>
+</html>

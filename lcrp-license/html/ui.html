@@ -1,0 +1,100 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="full-screen">
+    <div class="question-container">
+      <!-- header -->
+      <div class="header">
+        <h1>Lucid Driving School</h1>
+      </div>
+      <!-- home -->
+      <div class="body home">
+        
+        <div class="content">
+          <center><p class="bold-text">Welcome to Driving School</center>
+          <center>All citizens of Lucid must pass drivers test and theory test before they can drive.
+          <br>
+          <br>
+          <b>Theory Test</b>
+          <br>
+          - The Theory Test costs $200, this is not refunded if you fail the test.<br>
+          <br>
+          <b>Driving Test</b>
+          <br>
+          - The Driving Test costs $500, this payment will not be refunded if you fail as well.<br>
+          <br>
+          <b>Driving License</b>
+          <br>
+          - Driving license document can be bought in Drivering school's office for 50$
+          <br>
+          <br>
+          <b>Driving licence categories</b>
+          <br>
+          A - You can drive any motorcycles
+          <br>
+          B - You can drive single vehicles that isn’t hitched to a trailer (Basic license for driving personal vehicles)
+          <br>
+          C - You can drive large, heavy vehicles. (Such as large trucks)
+        </div>
+        <div class="buttonspot">
+        <a href="#" class="button btnQuestion"><span>Start</span></a>
+        </div>
+      </div>
+      <!-- Question-->
+      <div class="body questionnaire-container">
+        <div class="content">
+          <h2 class="questionNumber" id="questionNumero"></h2>
+          <br>
+          <p style="font-weight:bold; font-size: 20px" id="question"></p>
+          <form class="form" id="question-form">
+            <div>
+              <input type="checkbox" class="checkboxSize" name="question" id="answerA" value="A">
+              <label class="answerA"></label>
+            </div>
+            <div>
+              <input type="checkbox" class="checkboxSize" name="question" id="answerB" value="B">
+              <label class="answerB"></label>
+            </div>
+            <div>
+              <input type="checkbox" class="checkboxSize" name="question" id="answerC" value="C">
+              <label class="answerC"></label>
+            </div>
+            <div>
+              <input type="checkbox" class="checkboxSize" name="question" id="answerD" value="D">
+              <label class="answerD"></label>
+            </div>
+                 <button type="submit" id="submit" class="submit"><span>Next Question</span></button>
+              </form>
+              <button type="buttonClose" id="buttonClose" class="buttonClose"><span>Exit</span></button>
+        </div>
+      </div>
+      <!-- Résults -->
+      <div class="body resultGood">
+        <div class="content">
+          <center><p class="bold-text">Good work!</p><br><br>You did well during the examination.<br><br>You can close this window, and go take your road test(s).</center>
+        </div>
+        <div class="buttonspot">
+        <a href="#" class="button btnClose"><span>Close</span></a>
+        </div>
+      </div>
+      <div class="body resultBad">
+        <div class="content">
+          <center><p class="bold-text">You failed</p><br><br>You weren't ready for this test, try again later<br><br></center>
+        </div>
+        <div class="buttonspot">
+        <a href="#" class="button btnKick"><span>Close</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  <script src="questions.js" type="text/javascript"></script>
+  <script src="scripts.js" type="text/javascript"></script>
+  <script src="debounce.min.js" type="text/javascript"></script>
+
+</body>

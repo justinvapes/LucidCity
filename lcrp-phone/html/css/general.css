@@ -1,0 +1,468 @@
+.general-app {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(44, 37, 54);
+}
+
+.general-app .phone-home-container {
+    position: absolute;
+    top: 96%;
+    left: 27%;
+    z-index: 300;
+    height: 0.4vh;
+    width: 7vw;
+    border-radius: 0.8vh;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.general-app .phone-home-container:hover {
+    opacity: 0.4;
+}
+
+.general-header {
+    width: 100%;
+    height: 6vh;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+}
+
+.general-header-btn {
+    padding-top: 1vh;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 33.3%;
+    height: 6vh;
+    background-color: rgb(61, 47, 80);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    position: relative;
+    float: left;
+}
+
+.general-header-btn:hover {
+    opacity: 0.8;
+}
+
+.general-header-btn i {
+    font-size: 2.5vh;
+}
+.general-header-btn p {
+    font-size: 1.2vh;
+}
+
+#general-health {
+    background-color: rgb(48, 34, 68);
+    border-bottom: 0.4vh solid rgb(38, 24, 58);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.general-h {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 90%;
+    height: 32vh;
+    background-color: rgb(201, 188, 221);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    color: rgb(26, 26, 26);
+    font-size: 1.4vh;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-y: scroll;
+    text-decoration: none;
+}
+
+.general-h:focus {
+    outline: none !important;
+}
+
+.notepad-buttons {
+    display: none;
+    position: absolute;
+    top: 88%;
+    left: 5%;
+    width: 90%;
+    height: 4vh;
+}
+
+.save-notepad {
+    font-size: 1.4vh;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-color: rgb(61, 47, 80);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-top: 1vh;
+}
+
+.save-notepad:active {
+    background-color: rgb(48, 34, 68);
+}
+
+.clear-notepad {
+    font-size: 1.4vh;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-color: rgb(61, 47, 80);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-top: 1vh;
+}
+
+.clear-notepad:active {
+    background-color: rgb(48, 34, 68);
+}
+
+.general-h::-webkit-scrollbar {
+    display: none;
+}
+
+.general-j {
+    display: none;
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(41, 33, 53);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.general-o {
+    display: none;
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(41, 33, 53);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.notepads {
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    height: 36vh;
+    background-color: rgb(41, 33, 53);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.notepads{overflow:hidden; overflow-y:scroll;}
+.notepads::-webkit-scrollbar {
+    display: none;
+}
+
+.note {
+    background-color: rgb(48, 34, 68);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    width: 106%;
+    height: 6vh;
+    margin-left: -2.5vh;
+    position: relative;
+    border-top: 0.1vh solid rgb(34, 24, 48);
+}
+
+.note:hover {
+    opacity: 0.8;
+}
+
+.note:active {
+    opacity: 1;
+}
+
+.notes-buttons {
+    position: absolute;
+    top: 88%;
+    left: 5%;
+    width: 90%;
+    height: 4vh;
+}
+
+.new-note {
+    font-size: 1.4vh;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-color: rgb(61, 47, 80);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-top: 1vh;
+}
+
+.new-note:active {
+    background-color: rgb(48, 34, 68);
+}
+
+.delete-note {
+    font-size: 1.4vh;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-color: rgb(61, 47, 80);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-top: 1vh;
+}
+
+.delete-note:active {
+    background-color: rgb(48, 34, 68);
+}
+
+.note-check {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    height: 1vh;
+    width: auto;
+    background-color: rgb(101, 84, 124);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.note-name {
+    position: absolute;
+    top: 29%;
+    left: 5%;
+    font-size: 1.6vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.note-name:hover {
+    color: rgb(101, 84, 124);
+}
+
+.note-nombre {
+    display: none;
+    position: absolute;
+    top: 24%;
+    left: 7%;
+    width: 40%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 1.2vh;
+    color: white;
+    background-color: rgb(44, 37, 54);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.general-card {
+    width: 80%;
+    height: 28%;
+    background-color: rgba(83, 65, 109, 1);
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    border: 0.2vh solid rgba(31, 22, 44, 1);
+    border-radius: 0.4vh;
+    margin-top: 5%;
+    margin-left: 10%;
+    opacity: 0.8;
+}
+
+.general-card:hover {
+    opacity: 1;
+}
+
+.job-card {
+    position: relative;
+}
+
+.job-card-img {
+    position: absolute;
+    height: 9vh;
+    width: auto;
+    right: 0%;
+    bottom: 0%;
+}
+
+.job-card-name {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    color: rgb(202, 202, 202);
+    font-size: 1.7vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.job-card-job {
+    position: absolute;
+    bottom: 35%;
+    left: 8%;
+    color: white;
+    font-size: 1.3vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.job-card-onduty {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    color: white;
+    font-size: 1.1vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.owner-card {
+    position: relative;
+    display: none;
+}
+
+.owner-card-img {
+    position: absolute;
+    height: 9vh;
+    width: auto;
+    right: -15%;
+    bottom: 0%;
+}
+
+.owner-card-name {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    color: rgb(202, 202, 202);
+    font-size: 1.7vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.owner-card-funds {
+    position: absolute;
+    bottom: 35%;
+    left: 8%;
+    color: rgb(159, 233, 90);
+    font-size: 1.3vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.moneywash-card {
+    position: relative;
+    display: none;
+}
+
+.moneywash-card-img {
+    position: absolute;
+    height: 9vh;
+    width: auto;
+    right: 0%;
+    bottom: 0%;
+}
+
+.moneywash-card-name {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    color: rgb(202, 202, 202);
+    font-size: 1.7vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.moneywash-card-funds {
+    position: absolute;
+    bottom: 42%;
+    left: 8%;
+    color: rgb(159, 233, 90);
+    font-size: 1.3vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.moneywash-card-canwash {
+    position: absolute;
+    bottom: 23%;
+    left: 8%;
+    color: rgb(202, 202, 202);
+    font-size: 1.3vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.moneywash-card-cooldown {
+    position: absolute;
+    bottom: 4%;
+    left: 8%;
+    color: white;
+    font-size: 1.3vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.gym-card {
+    position: relative;
+}
+
+.no-others {
+    display: none;
+    position: absolute;
+    width: 80%;
+    top: 40%;
+    left: 10%;
+    text-align: center;
+    color: rgb(202, 202, 202);
+    font-size: 1.7vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.gym-card-name {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    color: rgb(202, 202, 202);
+    font-size: 1.7vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.gym-card-exp {
+    position: absolute;
+    bottom: 22%;
+    left: 8%;
+    color: rgb(202, 202, 202);
+    font-size: 1.3vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.gym-card-time {
+    position: absolute;
+    bottom: 4%;
+    left: 8%;
+    color: white;
+    font-size: 1.3vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.gym-card-img {
+    position: absolute;
+    height: 16vh;
+    width: auto;
+    right: -16%;
+    bottom: -23%;
+}

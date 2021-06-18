@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="includes/jquery-1.4.2.min.js"></script>
+    <title>Multicharacter</title>
+  
+</head>
+    <body>
+        <div class="loading-container">
+            <img src="logo.png">
+            <div class="loadbar load-bigbar">
+                <div class="load-barfill"></div>
+            </div>
+        </div>
+        <div class="container">
+            
+            <div id='flashMe'></div>
+            <div id='andereflash'></div>
+            <div class="main-screen">
+                <div class="confirm-stage">
+                    <div class="confirm-stage-box">
+                        <p class="character-del-txt">Confirm to PERMANENTLY DELETE your character</p>
+                        <div class="character-del-btn-container">
+                            <p class="character-del-btn" id="del-confirm">Confirm</p>
+                            <p class="character-del-btn" id="del-cancel">Cancel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-background">
+                    <div id="charMainDiv">
+                        <div id="charNav">
+                            <img src="logo.png">
+                            <ul id = "charNavUl">
+                                <li class="charNavLi" id="charNavLiAnnouncements">
+                                    <i class="fas fa-bullhorn charNavLiImg"></i>
+                                    <p class="charNavLiText" id="Announcements">Announcements</p>
+                                </li>
+                                <li class="charNavLi" id="charNavLiRules">
+                                    <i class="far fa-clipboard  charNavLiImg"></i>
+                                    <p class="charNavLiText" id="Rules">Rules</p>
+                                </li>
+                                <li class="charNavLi" id="charNavLiKeybinds">
+                                    <i class="far fa-keyboard charNavLiImg"></i>
+                                    <p class="charNavLiText" id="Keybinds">Keybinds</p>
+                                </li>
+                                <li class="charNavLi" id="charNavLiFAQ">
+                                    <i class="far fa-question-circle charNavLiImg"></i>
+                                    <p class="charNavLiText" id="FAQ">FAQ</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="charMenu">
+                            <div id="charMenuTitle">
+                                <p id="charMenuTitleP" data-text="Welcome to Lucid City RP">Welcome to Lucid City RP!</p>
+                            </div>
+                            <div id="charMenuAnnouncements">
+                                <p id="charMenuAnnouncementsText">Server is currently on beta stage, please report all bugs to discord</p>
+                            </div>
+                            <div id="charMenuCharacterSelect">
+                                <div class="character characterEmpty" id="char-1" data-cid="">
+                                    <i class="far fa-plus-square fa-3x charMenuNoCharacterBoxImg"></i>
+                                </div>
+                                <div class="character characterEmpty" id="char-2" data-cid="">
+                                    <i class="far fa-plus-square fa-3x charMenuNoCharacterBoxImg"></i>
+                                </div>
+                                <div class="character characterEmpty" id="char-3" data-cid="">
+                                    <i class="far fa-plus-square fa-3x charMenuNoCharacterBoxImg"></i>
+                                </div>
+                                <div class="character characterEmpty" id="char-4" data-cid="">
+                                    <i class="far fa-plus-square fa-3x charMenuNoCharacterBoxImg"></i>
+                                </div>
+                                <div class="character characterEmpty" id="char-5" data-cid="">
+                                    <i class="far fa-plus-square fa-3x charMenuNoCharacterBoxImg"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="charCreation">
+                            <div id="charCreationBody">
+                                <div class="char-register-inputs">
+                                    <p class="charCreationP" id="charCreationP-fn">Choose your First Name:</p>
+                                    <input type="text" id="first_name" placeholder="First Name" class="char-reg-input" required>
+                                    
+                                    <p class="charCreationP" id="charCreationP-ln">Choose your Last Name:</p>
+                                    <input type="text" id="last_name" placeholder="Last name" class="char-reg-input" required>
+                                    
+                                    <p class="charCreationP" id="charCreationP-nat">Choose your Nationality:</p>
+                                    <input type="text" id="nationality" placeholder="Nationality" class="char-reg-input" required>
+                                    
+                                    <p class="charCreationP" id="charCreationP-bd">Choose your Birthdate:</p>
+                                    <input type="date" id="birthdate" placeholder="Date of birth" min="1900-01-01" max="2999-12-31" class="char-reg-input" required>
+                                    
+                                    <p class="charCreationP">Choose your Gender:</p>
+                                    <select id="gender" name="gender">
+                                        <option value="man" selected="selected">Man</option>
+                                        <option value="woman">Woman</option>
+                                    </select>
+                                    <div class="charCreationButtons">
+                                        <p class="character-reg-btn" id="create">Confirm</p>
+                                        <p class="character-reg-btn" id="cancel">Cancel</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>

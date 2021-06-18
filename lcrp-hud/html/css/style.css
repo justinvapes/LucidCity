@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
+
+/* Hud */
+@font-face {
+  font-family: Kum;
+  src: url('../fonts/KumbhSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'pricedownblack';
+  src: url('pricedown_bl-webfont.woff2') format('woff2'),
+       url('pricedown_bl-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'gta-ui';
+  src: url('../fonts/gta-ui.ttf');
+}
+
+@font-face {
+  font-family: 'pdown';
+  src: url('../fonts/pdown.ttf');
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url('../verdana.ttf');
+}
+
+@font-face {
+  font-family: 'Verdana Bold';
+  src: url('../VerdanaBold.ttf');
+}
+
+.main {
+  position: absolute;
+  bottom: 0%;
+  left: 1.5%;
+  transform: translate(-1.5%, 0%);
+}
+
+/* Header of Menu*/
+#title-hud {
+  color:white;
+  font-family: Kum; 
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  order: 2;
+}
+
+#reset {
+  position:relative;
+  order: 1;
+  margin-left: 8px;
+  margin-top: 5px;
+}
+
+#close {
+  margin-right: 8px;
+  position:relative;
+  order: 3;
+  margin-top: 5px;
+}
+
+.top{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  left: 0%;
+}
+
+.bottom{
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  left: 0%;
+}
+
+/* --------------------------------------------------------*/
+
+.browser-window-osx {
+  position:relative;
+  box-shadow: 0px 6px 9px 0px rgba(50, 50, 50, 0.11);
+  background: rgb(28,40,83);
+  background: linear-gradient(90deg, rgba(28,40,83,1) 0%, rgba(18,38,78,1) 25%, rgba(21,46,88,1) 50%, rgba(18,38,78,1) 75%, rgba(28,37,77,1) 100%);
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  height: 100%;
+  width: 30%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 25%);
+}
+
+.browser-window-osx .header {
+  background: #0a0e1f;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px 6px 0 0;
+  height: 30px;
+  
+}
+
+#selection {
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
+  font-family: Kum;
+  font-size:16px;
+  color: #fff;
+  float: right;
+  width: 155px;
+  height: 30px;
+  border-radius: 5px;
+  transition: all 0.1s;
+	background: black;
+	background: linear-gradient(90deg, rgba(19,36,80,1) 0%, rgba(21,36,80,1) 46%, rgba(5,16,57,1) 100%);
+  box-shadow: 0 0 6px 1px #1fbfb8;
+  text-shadow: 1px 1px 5px black;
+  overflow: hidden;
+}
+
+.options {
+  background-color: #0a0e1f;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+/* Progress Bar*/
+.progressplayer {
+  -webkit-transition: 0.35s stroke-dashoffset;
+  -o-transition: 0.35s stroke-dashoffset;
+  transition: 0.35s stroke-dashoffset;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  overflow:none;
+  stroke-linecap: round;
+}
+
+.money-container {
+  position: absolute;
+  right: 5vw;
+  top: 7vh;
+}
+
+#cash {
+  color: white;
+}
+
+.money-cash,.money-bank {
+  display: none;
+  float:right;
+  font-family: 'pdown';
+  font-weight: 400;
+  font-size: 29px;
+  color: white;
+  padding: 4px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin: 0;
+  margin-right: 6px;
+  margin-top: 6px;
+  padding: 0;
+}
+
+.money-cash {
+  color: rgb(210, 210, 210);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-align: right;
+}
+
+#plus-changeamount {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-align: right;
+  color: #f0f0f0;
+}
+
+#minus-changeamount {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-align: right;
+  color: #f0f0f0;
+}
+
+.minus {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-align: right;
+  color: #801e1f;
+}
+
+.munnie {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-align: right;
+  color: #277418;
+}
+
+.moneyupdate {
+  float: right;
+  padding-left: 0.5vw;
+}
+
+.plus {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-align: right;
+  color: #277418;
+}
+
+.circle {
+  margin-left: -4.5%;
+}
+
+.ui-car-time {
+  opacity: 0.9;
+  display: block !important;
+  position: absolute;
+  font-size: 1.5vh;
+  bottom: 6.5vw;
+  left: 13.0vw;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.car-info {
+  position: relative;
+  float: left;
+}
+
+.ui-car-container {
+	display: none;
+  position: absolute;
+  left: 15.5%;
+  bottom: 3.2%;
+	display: flex;
+}
+
+.ui-car-container .stat {
+	background: linear-gradient(to top, #5b5b5b 90%, #1bd295 90%);
+	text-align: right;
+}
+
+.ui-car-container .stat .icon {
+	float: right;
+	right: 0px;
+	left: 15px;
+}
+
+.ui-car-container .stat span {
+	float: right;
+	right: 0px;
+	left: 15px;
+}
+
+.text {
+  color: white;
+  font-family: 'Lato', Tahoma, Geneva, sans-serif;
+}
+
+.gauges {
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 13%;
+}
+
+.mapoutline {
+	position: fixed;
+	bottom: 8vh;
+	left: -2.6vh;
+	width: 29.529vh;
+	text-align: center;
+}
+
+.mapborder {
+	width: 21.40vh;
+	height: 19.2vh;
+	border: 3px solid rgb(116, 116, 116);
+	border-radius: 50%;
+	position: relative;
+	top: 23px;
+	display: inline-block;
+}
+
+.waypoint {
+  position: absolute;
+  left: 1%;
+  bottom: 6%;
+  color: white;
+  font-family: 'Lato', Tahoma, Geneva, sans-serif;
+}

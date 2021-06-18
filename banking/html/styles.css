@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  user-select: none;
+ -khtml-user-select: none;
+ -o-user-select: none;
+ -moz-user-select: -moz-none;
+ -webkit-user-select: none;
+}
+
+.console {
+  background-color: rgba(255,86,60,0.3);
+  width: 500px;
+  min-height: 30px;
+  color: white;
+  position: absolute;
+  top: 5px;
+  left: 200px;
+}
+html {
+  overflow: hidden;
+}
+@font-face {
+  font-family: 'pricedown';
+  src: url(pricedown.ttf);
+}
+#cursor {
+    position: absolute;
+    z-index: 99999999;
+    display: none;
+}
+
+.sans {
+  font-family: 'Lato';
+}
+
+h1,h2,h3,h4 {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 120;
+  right: 40;
+  width: 300px;
+  height: 200px;
+}
+#balance {
+  float:right;
+  font-family: pricedown;
+  font-weight: 400;
+  font-size: 2rem;
+  color: white;
+  padding: 4px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin: 0;
+  margin-right: 6px;
+  padding: 0;
+}
+#icon {
+  height: 15px;
+  width: auto;
+  margin-right: 10px;
+}
+.green {
+  color: rgb(0, 125, 0);
+  font-weight: 700;
+  margin-right: 6px;
+}
+.red {
+  color: rgb(255, 0, 0);
+}
+#pre {
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+.balance {
+  display: inline-block;
+  height: 30px;
+  width: 100%;
+}
+.transaction {
+  display: inline-block;
+  height: 30px;
+  width: 100%;
+}
+.full-screen {
+  width: 100%;
+  height:100%;
+  display: flex;
+}
+.bank-container {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50vh;
+  background-color: rgb(61, 61, 61);
+  border: 0.2vh solid rgb(36, 36, 36);
+  border-top: 1px solid #313131cc;
+  border-radius: 6px;
+  overflow: hidden;
+  display: none;
+  z-index: 9999999;
+}
+.header {
+  width:100%;
+  height: 10vh;
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.header .logo {
+  height: 13%;
+  width: auto;
+  position: absolute;
+  top: 3.5%;
+  left: 47%;
+}
+.header .logo:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: ease-in-out 0.3s;
+}
+.header .header-right {
+  position: absolute;
+  right: 3%;
+  top: 0%;
+  color: #dcd1f5e1;
+  margin-right: 0px;
+}
+.header-right h3 {
+  float: right;
+  margin-top: 3.2vh;
+}
+
+.home-container {
+  margin-top: 3.3vh;
+  margin-right: 2.5vh;
+  font-size: 2em;
+  color: #350f96;
+}
+
+.home-container:hover {
+  color: #350f96ad;
+  transition: ease-in-out 0.3s;
+}
+.body {
+  width: 100%;
+  height: 50vh;
+  display: none;
+}
+.centered {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 80%;
+  height: 500px;
+  margin-left:auto;
+  margin-right: auto;
+}
+.button {
+  position: absolute;
+  top: 7%;
+  left: 3%;
+  height: 3.2vh;
+  width: 7vw;
+  align-items: center;
+  text-align: center;
+  background: rgb(68,40,139);
+  border-radius: 0.4vh;
+  border: 0.2vh solid #2e2e2e96;
+  color: #eeeaf7cc;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: all 0.1s linear;
+}
+
+.button:hover {
+  background: #d7caf7cc;
+  border: 0.2vh solid #2e2e2e96;
+  color: rgb(68,40,139);
+}
+
+.button:focus, .submit {outline:0;}
+
+
+.number-display {
+  flex-grow: 1;
+  align-items: center;
+  height: 70px;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 100%;
+  background: #ee3a3d;
+  background-image: linear-gradient(to bottom, #f4f5f5, #dfdddd);
+  border-radius: 4px;
+  color: #777;
+  font-size: 2em;
+  padding: 10px 20px;
+}
+
+.number-display p {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+}
+
+.trans-txt {
+  font-family: 'Lato';
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #777;
+}
+
+.icons {
+  position: absolute;
+  top: -130%;
+  left: 40%;
+  font-size: 1em;
+  margin-top: 50px;
+}
+
+input[type=text], select, textarea {
+  text-align: center;
+  width: 100%;
+  height: 6vh;
+  padding: 25px 20px;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 1.5vh;
+  resize: vertical;
+}
+
+input[type=submit], .submit {
+  margin-top: 1.5vh;
+  height: 6vh;
+  text-align: center;
+  width: 100%;
+  background: rgb(68,40,139);
+  border-radius: 4px;
+  color: #eeeaf7cc;
+  font-size: 1.5em;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+  border: none;
+  transition: all 0.1s linear;
+}
+
+input[type=submit], .submit:hover {
+  background: #d7caf7cc;
+  color: rgb(68,40,139);
+}
+
+.form {
+  max-width: 74%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+}
+
+.trans-container {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  height: 67%;
+  width: 100%;
+}
+
+.trans-ul {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+.trans-ul {
+  background-color: rgb(36, 36, 36);
+  overflow:hidden; 
+  overflow-y:scroll;
+  border-top: 0.3vh solid rgb(36, 36, 36);
+}
+.trans-ul ::-webkit-scrollbar {
+    display: none;
+}
+
+.transaction {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  margin-left: -5%;
+  border: 0.12vh solid #1d1d1db6;
+  width: 105%;
+  height: 8.5vh;
+  background: rgb(69,41,142);
+  background: linear-gradient(180deg, rgba(69,41,142,1) 50%, rgba(51,31,96,1) 100%);
+  color: #eeeaf7cc;
+}
+
+.transaction:hover {
+  transform: scale(1.05);
+  transition: ease-in-out 0.2s;
+  border: 0.12vh solid #1d1d1db6;
+  color: rgb(68,40,139);
+  background: #d7caf7cc;
+  background: linear-gradient(180deg, #cab9f3cc 51%, #d9cbf8cc 100%);
+}
+
+.transaction-type {
+  margin-top: 0.8vh;
+  float: left;
+  margin-left: 4vh;
+  font-size: 0.9em;
+  font-weight: bold;
+  width: 40%;
+}
+
+.transaction-amount {
+  position: inherit;
+  margin-top: -3.7%;
+  margin-left: 55%;
+  width: 40%;
+  text-align: end;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.transaction-date {
+  margin-top: -2vh;
+  text-align: justify;
+  width: 10%;
+  text-align: start;
+  margin-left: 4vh;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.trans-p {
+  width: 100%;
+  position: absolute;
+  top: 29%;
+  left: 0%;
+  color: rgba(255, 255, 255, 0.493);
+  text-align: center;
+  font-size: 1.7em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.trans-line {
+  width: 95%;
+  height: 0.05vh;
+  opacity: 0.3;
+  margin-top: 3.2%;
+  margin-left: 1.5%;
+  background-color: white;
+}
+
+.account-number {
+  margin-top: 1vh;
+  float: right;
+  margin-right: 1.6vh;
+  font-size: 0.7em;
+  font-weight: bold;
+  width: 21%;
+}

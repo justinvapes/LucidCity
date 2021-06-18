@@ -1,0 +1,519 @@
+/*
+#363062
+#4d4c7d
+#827397
+#d8b9c3
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Josefin+Sans&display=swap');
+
+.container{
+    background-image:url("characterBG.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.loading-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image:url("characterBG.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+.loading-container img {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    left: 40%;
+    top: 26%;
+}
+
+.loadbar {
+    position: absolute;
+    top: 59%;
+    left: 38%;
+    height: 2%;
+    border: .05vh solid rgba(145,92,247,0.2);
+    background-color: rgba(145,92,247, 0.4);
+    border-radius: 2px;
+}
+
+.load-barfill {
+    width: 0%;
+    background: rgb(112, 40, 247);
+    background: linear-gradient(90deg, rgba(112, 40, 247, 0.8) 0%, rgba(145,92,247,0.8) 90%);
+}
+
+.load-bigbar {
+    float: left;
+    width: 25%;
+    margin-right: 1%;
+}
+
+.load-barfill {
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: .2s ease-in-out;
+}
+
+#charMainDiv{
+    background-image: url("secondBG.jpg");
+    background-size: cover;
+    width: 56.25vw;
+    height: 56.25vh; 
+    display:grid;
+    grid-template-areas: "nav menu menu menu" 
+                           "nav menu menu menu"
+                           "nav menu menu menu";
+    grid-template-columns: repeat(4,1fr);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+}
+
+#charNav{
+    grid-area: nav;
+    background-color: rgb(0, 0, 0,0.75);
+    border-right: 2px solid black;
+
+}
+
+img{
+    max-width: 100%;
+    /*border-bottom: 1px solid #7c7caa;*/
+}
+
+.charNavUl{
+    list-style-type:none;
+}
+
+.charNavLi{
+    color: white;
+    height:5vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 4%;
+    /*border-bottom: 1px solid lightgrey;*/
+}
+
+.charNavLi:hover{
+    background-color: rgb(145,92,247);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black
+}
+
+.charNavLiImg{
+   padding:2%;
+   color: white;
+}
+
+.charNavLiText{
+    font-size: 1em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#charMenu{
+    grid-area: menu;
+    display: grid;
+    grid-template-areas: "title title title title title"
+                         "empty announcements announcements announcements empty2"
+                         "charbox charbox charbox charbox charbox";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 2fr 2fr;
+}
+
+#charMenuTitle{
+    grid-area: title;
+    height:100%;
+    widows: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-text-stroke:3px rgb(36, 20, 0);
+}
+
+#charMenuTitleP{
+    background-color: rgb(0, 0, 0,0.75);
+    height:50%;
+    width: 94%;
+    display: flex;
+    margin-left: 3%;
+    margin-right: 3%;
+    align-items: center;
+    justify-content: center;
+    /*font-family: 'Ceviche One', cursive;*/
+    font-family: 'Carter One', cursive;
+    font-size: 1.5em;
+    color: rgb(175, 118, 27);
+    border: 2px solid black;
+}
+
+#charMenuCharacterSelect{
+    grid-area: charbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.character{
+    background-color:rgb(0, 0, 0,0.75);
+    border: 2px solid black;
+    border-radius: 5px;
+    height:70%;
+    width: 15%;
+    transition: transform .2s; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.charMenuCharacterBoxText{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.8em;
+    margin-bottom: 3px;
+    overflow-y: hidden;
+}
+
+.charMenuCharacterBoxImg{
+    color:white;
+    margin-bottom: 5%;
+}
+
+.character:hover{
+    transform: scale(1.25);
+    background-color: black;
+    border: 2px solid #d8b9c3;
+}
+
+.hoverable{
+    transform: scale(1.25);
+    background-color: black;
+    border: 2px dashed red;
+}
+
+
+.charMenuNoCharacterBoxImg{
+    color: #d8b9c3;
+}
+
+#charMenuAnnouncements{
+    grid-area: announcements;
+    background-color: rgb(0, 0, 0,0.75);
+    width:100%;
+    height:200px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    border: 2px solid black;
+    overflow-y: auto !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#charMenuAnnouncementsText{
+    flex-direction: column;
+    font-size: 1.1em;
+    margin-top: 2%;
+    color: white;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+#charCreation{
+    grid-area: menu;
+    background-color: rgb(0, 0, 0,0.75);
+    display: flex;
+    flex-direction: column;
+    margin:2%;
+}
+
+#charCreationBody{
+    color: black;
+}
+
+.char-register-inputs{
+    height:52.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.charCreationP{
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    color: white;
+    font-size: 1em;
+}
+
+.char-reg-input{
+    width: 40%;
+    border:none;
+    border-bottom: 2px solid rgb(145,92,247);
+    background-color: transparent;
+    color:white;
+    text-align:center
+}
+
+.char-reg-input:hover, .char-reg-input:focus{
+    outline: none;
+ }
+
+ #gender{
+     background-color: transparent;
+     border:none;
+     border-bottom: 2px solid rgb(145,92,247);
+     color:white;
+     width:40%;
+     text-align:center;
+ }
+
+ #gender:hover, #gender:focus{
+    outline: none;
+ }
+
+ option{
+    background-color:  rgb(145,92,247);
+    border:none;
+ }
+
+ option:hover,
+option:focus,
+option:active,
+option:checked {
+  background-color: #4d4c7d;
+}
+
+.charCreationButtons{
+    margin-top: 7%;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-evenly;
+}
+
+.character-reg-btn{
+    font-family: 'Josefin Sans', sans-serif;
+    width:30%;
+    height: 3vh;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-reg-btn:hover{
+    background-color: rgb(145,92,247);
+}
+ 
+#loginPane{
+    position: absolute;
+    z-index: 3;
+    height: 15vh;
+    width:20vw;
+    background-color:#4d4c7d;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border:2px solid black;
+}
+
+.loginPaneNav{
+    background-color: #363062;
+    color: white;
+    display: flex;
+    align-items: center;
+    height:20%;
+    width: 100%;
+}
+
+.loginPaneNavTitle{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.3em;
+    padding-left: 5%;
+    width:92%;
+}
+
+#loginPaneNavCross:hover{
+    color: red;
+}
+
+.loginPaneLogin{
+    width:100%;
+    height:80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginPaneTitle{
+    grid-area: body;
+    font-family: 'Josefin Sans', sans-serif;
+    color:white;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+
+.loginPaneButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.loginPaneButton{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 1em;
+    font-family: 'Carter One', cursive;
+    background-color: rgb(145,92,247);
+    border:2px solid black;
+    width:30%;
+}
+
+.loginPaneButton:hover{
+    background-color:  rgb(70, 43, 119);
+}
+
+#loginPaneButtonPlay{
+    color: rgb(175, 118, 27);
+    -webkit-text-stroke:2px rgb(36, 20, 0);
+}
+
+#loginPaneButtonDelete{
+    background-color: #C70000;
+    color: rgb(175, 118, 27);
+    -webkit-text-stroke:2px rgb(36, 20, 0);
+}
+
+#loginPaneButtonDelete:hover{
+    background-color: #500000;
+}
+
+#loginPaneDeleteNo{
+    background-color: red;
+    color: rgb(175, 118, 27);
+    -webkit-text-stroke:2px rgb(36, 20, 0);
+}
+
+#loginPaneDeleteNo:hover{
+    background-color: #500000;
+}
+
+#loginPaneDeleteYes{
+    background-color: green;
+    color: rgb(175, 118, 27);
+    -webkit-text-stroke:2px rgb(36, 20, 0);
+}
+
+#loginPaneDeleteYes:hover{
+    background-color: rgb(0, 66, 0);
+}
+
+#DraggableObject{
+    height: 170px;
+    width: 125px;
+    position:absolute;
+    background-color: yellow;
+}
+
+.confirm-stage {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.confirm-stage-box {
+    position: absolute;
+    z-index: 1001;
+    background-color:rgba(0, 0, 0,0.9);
+    border: 2px solid black;
+    width: 30%;
+    height: 20%;
+    top: 40%;
+    left: 42%;
+}
+
+
+.character-del-txt {
+    width: 86%;
+    margin-left: 7%;
+    border-bottom: 1.5px solid rgb(145,92,247);
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+    font-size: 1.2em;
+    height: 10%;
+}
+
+.character-del-btn {
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 50%;
+    margin-top: 5%;
+}
+
+.character-del-btn:hover{
+    background-color: rgb(145,92,247);
+}
+
+.character-del-btn-container {
+    width: 100%;
+    height: 40%;
+    margin-top: 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-height: 800px) {
+    .charMenuCharacterBoxText {
+      font-size: 0.5em;
+    }
+    .charCreationP {
+        font-size: 0.7em;
+    }
+    .charCreationP {
+        margin-top: 4%;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    .charMenuCharacterBoxText {
+      font-size: 0.26em;
+    }
+    .charCreationP {
+        font-size: ;
+    }
+}

@@ -1,0 +1,646 @@
+.invest-app {
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    width: 100vh;
+    height: 100vh;
+    display: none;
+    z-index: 125;
+}
+
+.invest-app .phone-invest-container {
+    position: absolute;
+    top: 55%;
+    left: 7%;
+    z-index: 300;
+    height: 0.4vh;
+    width: 7vw;
+    border-radius: 0.8vh;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.invest-app .phone-invest-container:hover {
+    opacity: 0.4;
+}
+
+.inv-back {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 27.0vh;
+    height: 57.0vh;
+    border-radius: 4vh;
+    background-color: black;
+}
+
+.invest-app-header {
+    background-color: rgb(48, 48, 48);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vh;
+    height: 10vh;
+}
+
+.invest-app-header p {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 1.9vh;
+    position: absolute;
+    top: 60%;
+    left: 2%;
+}
+
+.invest-app-header p:hover {
+    opacity: 0.4;
+}
+
+.invest-app-header i {
+    color: rgb(219, 199, 17);
+    font-size: 1.6vh;
+    position: absolute;
+    left: 13.5%;
+    top: 64%;   
+}
+
+.invest-app .phone-inv-container {
+    position: absolute;
+    top: 62%;
+    left: 21.5%;
+    color: white;
+}
+
+.invest-app-header .fa-door-open:hover {
+    opacity: 0.4;
+}
+
+.invest-app-wallet .wallet {
+    color: rgb(65,65,65);
+    font-size: 1.5vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: absolute;
+    top: 12%;
+    left: 1.8%;
+}
+
+.invest-app-wallet .dollars {
+    text-align: end;
+    left: -2%;
+    width: 26%;
+    color: rgb(65,65,65);
+    font-size: 1.3vh;
+    font-weight: bolder;
+    font-family: sans-serif;
+    position: absolute;
+    top: 11.0%;
+}
+
+.invest-app-wallet .LDC {
+    text-align: end;
+    left: -2%;
+    width: 26%;
+    color: rgb(65,65,65);
+    font-size: 1.3vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: absolute;
+    top: 13.2%;
+}
+
+.invest-app-wallet .dollars-txt {
+    text-align: start;
+    left: 1.4%;
+    width: 26%;
+    color: rgb(65,65,65);
+    font-size: 1.3vh;
+    font-weight: bolder;
+    font-family: sans-serif;
+    position: absolute;
+    top: 11.0%;
+}
+
+.invest-app-wallet .LDC-txt {
+    text-align: start;
+    left: 1.4%;
+    width: 26%;
+    color: rgb(65,65,65);
+    font-size: 1.3vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: absolute;
+    top: 13.2%;
+}
+
+.invest-app-wallet i {
+    position: absolute;
+    left: 7.5%;
+    top: 11.2%;
+    font-size: 8.5em;
+    color: rgba(65,65,65,0.0);
+}
+
+.invest-app-buttons {
+    height: 4%;
+    width: 100%;
+    position: absolute;
+    top: 50.7%;
+}
+
+.invest-app-buttons .invest-app-buy {
+    color: white;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bolder;
+    padding-top: 0.6%;
+    border-radius: 0.8vh;
+    text-align: center;
+    background-color: rgb(32, 163, 27);
+    height: 3vh;
+    width: 11.3%;
+    position: absolute;
+    left: 1.2%;
+    top: 5%;
+}
+
+.invest-app-buttons .invest-app-buy:hover {
+    opacity: 0.8;
+}
+
+.invest-app-buttons .invest-app-sell {
+    color: white;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bolder;
+    padding-top: 0.6%;
+    border-radius: 0.8vh;
+    text-align: center;
+    background-color: rgb(219, 34, 34);
+    height: 3vh;
+    width: 11.3%;
+    position: absolute;
+    left: 13.3%;
+    top: 5%;
+}
+
+.invest-app-buttons .invest-app-sell:hover {
+    opacity: 0.8;
+}
+
+.invest-amount {
+    border: 0.2vh solid rgba(65,65,65);
+    border-radius: 0.4vh;
+    color: rgba(65,65,65);
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    position: absolute;
+    left: 1.3%;
+    top: 47.5%;
+    width: 23.2%;
+    height: 2.7vh;
+}
+
+.invest-amount-txt {
+    font-size: 1em;
+    font-family: sans-serif;
+    color: rgba(65,65,65);
+    font-weight: bolder;
+    position: absolute;
+    left: 6%;
+    top: 45.5%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.invest-disclaimer {
+    font-size: 0.7em;
+    padding-top: 1.2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: rgba(48, 48, 48, 0.05);
+    position: absolute;
+    top: 16.5%;
+    left: 0.1%;
+    text-align: justify;
+    width: 26%;
+    height: 10vh;
+}
+
+.invest-ldc-ratio {
+    width: 26%;
+    text-align: center;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: rgb(219, 34, 34);
+    position: absolute;
+    top: 26.8%;
+    left: 0%;
+}
+
+.slide-container {
+    transition:all .3s ease;
+}
+
+.highway-slider {
+    margin-top: 3.4%;
+	display:flex;
+	justify-content:center;
+	width:29%;
+	height:5vh;
+    background-color: rgb(15, 15, 15);
+}
+.highway-lane {
+    display:flex;
+    height:100%;
+}
+
+.highway-lane {
+    width:calc(5vw * 33);
+}
+
+@keyframes translateinfinite {
+	100% { transform:translateX(calc(-5vw * 12));  }
+}
+
+.highway-car {
+    width:5vw;
+    animation:translateinfinite 15s linear infinite;
+}
+
+.highway-car {
+    flex:1;
+    display:flex;
+    align-items:center;
+    color:#ffffff;
+    background-color: rgb(15, 15, 15);
+    position: relative;
+}
+
+.highway-car .abv {
+    position: absolute;
+    top: 2%;
+    left: 12%;
+    font-size: 1.5vh;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(143, 143, 143);
+}
+
+.highway-car .value {
+    position: absolute;
+    bottom: -5%;
+    left: 12%;
+    font-size: 1.3vh;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(209, 209, 209);
+    width: 80%;
+    text-align: start;
+}
+
+.highway-car .percentage {
+    position: absolute;
+    top: 10%;
+    right: 12%;
+    font-size: 1vh;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 0.3vh;
+    text-align: end;
+}
+
+.invest-assets-ul{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    background-color: black;
+    height:34vh; width:25%;
+}
+.invest-assets-ul{overflow:hidden; overflow-y:scroll;}
+.invest-assets-ul::-webkit-scrollbar {
+    display: none;
+}
+
+.asset {
+    width: 120%;
+    height: 6vh;
+    background-color: rgb(8, 8, 8);
+    border-bottom: 0.1vh solid rgba(78, 78, 78, 0.2);
+    margin-left: -1.9vw;
+    position: relative;
+}
+
+.asset:hover {
+    transition: ease-in-out 0.2s;
+    background-color: rgb(27, 27, 27);
+}
+
+.asset-abv {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    width: 40%;
+    text-align: start;
+    font-size: 1.6vh;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(156, 156, 156);
+}
+
+.asset-name {
+    position: absolute;
+    bottom: 0%;
+    left: 3%;
+    width: 60%;
+    text-align: start;
+    font-size: 1.3vh;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.asset-value {
+    position: absolute;
+    top: 5%;
+    right: 3.5%;
+    width: 40%;
+    text-align: end;
+    font-size: 1.3vh;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.asset-percentage {
+    position: absolute;
+    bottom: 0%;
+    right: 3%;
+    text-align: center;
+    font-size: 1.3vh;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(255, 255, 255);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 0.3vh;
+}
+
+.header-title {
+    position: absolute;
+    top: 4%;
+    left: 1%;
+    font-size: 2.1vh;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.header-date {
+    position: absolute;
+    top: 7%;
+    left: 1%;
+    font-size: 1.5vh;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(156, 156, 156);
+}
+
+.invest-footer {
+    position: absolute;
+    top: 44.5%;
+    left: 1%;
+    height: 12vh;
+    width: 24.5%;
+    background-color: rgba(58, 58, 58, 0.344);
+    border-radius: 0.8vh;
+}
+
+.footer-line {
+    position: absolute;
+    height: .3vh;
+    width: 2vw;
+    top: 3.5%;
+    left: 43%;
+    background-color: rgba(255, 255, 255, 0.753);
+    border-radius: 0.8vh;
+}
+
+.footer-risk {
+    position: absolute;
+    height: .4vh;
+    width: 5.7vw;
+    top: 14%;
+    left: 55%;
+    font-size: 0.7vh;
+    color: rgba(221, 221, 221, 0.753);
+    text-align: justify;
+}
+
+.chart-div {
+    position: absolute;
+    top: 13%;
+    left: 0%;
+    width: 26%;
+    height: 16vh;
+}
+
+.chart-frame {
+    position: absolute;
+    top: 13%;
+    left: 0%;
+    width: 26%;
+    height: 15.8vh;
+    border-top: 0.7vh solid rgb(36, 36, 36);
+    border-bottom: 1vh solid rgb(36, 36, 36);
+}
+
+.chart-abv {
+    position: absolute;
+    top: 8.8%;
+    left: 2%;
+    font-size: 1.5vh;
+    font-weight: bold;
+    color: white;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.chart-name {
+    position: absolute;
+    top: 11%;
+    left: 2%;
+    font-size: 1.1vh;
+    font-weight: bold;
+    color: rgb(156, 156, 156);
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.chart-desc {
+    position: absolute;
+    top: 28.5%;
+    left: 0%;
+    width: 26%;
+    height: 9.3vh;
+    background-color: rgb(36, 36, 36);
+}
+
+.chart-left-desc {
+    position: absolute;
+    top: 28.5%;
+    left: 0%;
+    width: 14%;
+    height: 10vh;
+}
+
+.chart-left-desc p {
+    font-size: 1.2vh;
+    color: rgb(230, 230, 230);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin-left: 2.5vh;
+    margin-top: 1vh;
+}
+
+.chart-right-desc {
+    position: absolute;
+    top: 28.5%;
+    left: 13.6%;
+    width: 14%;
+    height: 8vh;
+    border-left: 0.2vh solid rgba(255, 255, 255, 0.329);
+}
+
+.chart-right-desc p {
+    font-size: 1.2vh;
+    color: rgb(230, 230, 230);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin-left: 1.8vh;
+    margin-top: 1vh;
+}
+
+.phone-asset-back {
+    position: absolute;
+    top: 9.8vh;
+    left: 22%;
+}
+
+.phone-asset-back i:hover {
+    color: rgb(102, 102, 102);
+    transition: ease-in-out 0.2s;
+}
+
+.phone-asset-back i {
+    color: rgb(156, 156, 156);
+    font-size: 1.8vh;
+}
+
+.buy-asset {
+    position: absolute;
+    width: 24%;
+    height: 3vh;
+    left: 1%;
+    top: 47%;
+    background-color: rgb(19, 19, 19);
+    border: 0.1vh solid rgba(77, 77, 77, 0.5);
+    border-radius: .2vh;
+    color: rgba(218, 204, 16, 0.904);
+    font-size: 1.3vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.5vh;
+}
+
+.buy-asset:hover {
+    background-color: rgb(49, 49, 49);
+    transition: ease-in-out 0.2s;
+}
+
+.sell-asset {
+    position: absolute;
+    width: 24%;
+    height: 3vh;
+    left: 1%;
+    top: 51%;
+    background-color: rgb(19, 19, 19);
+    border: 0.1vh solid rgba(77, 77, 77, 0.5);
+    border-radius: .2vh;
+    color: rgba(218, 204, 16, 0.904);
+    font-size: 1.3vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.5vh;
+}
+
+.sell-asset:hover {
+    background-color: rgb(49, 49, 49);
+    transition: ease-in-out 0.2s;
+}
+
+.asset-person-desc {
+    position: absolute;
+    top: 38.2%;
+    left: 0.3%;
+    width: 14%;
+    height: 8vh;
+}
+
+.asset-person-desc p{
+    font-size: 1.2vh;
+    color: rgb(230, 230, 230);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin-left: 1vh;
+    margin-top: 1vh;
+}
+
+.asset-person-desc-right {
+    text-align: end;
+    position: absolute;
+    top: 38.2%;
+    left: 10.5%;
+    width: 14%;
+    height: 8vh;
+}
+
+.asset-person-desc-right p{
+    font-size: 1.2vh;
+    color: rgb(230, 230, 230);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin-left: 1vh;
+    margin-top: 1vh;
+}
+
+.asset-amount {
+    background-color: rgba(255, 255, 255, .2);
+    border: none;
+    border-radius: 0.4vh;
+    color: white;
+    font-size: 1.3vh;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    height: 2vh;
+    width: 3.7vw;
+    position: absolute;
+    left: 14.6%;
+    top: 9.8vh;
+}

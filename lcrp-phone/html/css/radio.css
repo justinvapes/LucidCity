@@ -1,0 +1,139 @@
+* {
+    user-select: none;
+   -khtml-user-select: none;
+   -o-user-select: none;
+   -moz-user-select: -moz-none;
+   -webkit-user-select: none;
+}
+
+.radio-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: #c3aae0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8100fd , #c3aae0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8100fd , #c3aae0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background-size: 400% 400%;
+    
+    -webkit-animation: AnimationName 35s ease infinite;
+    -moz-animation: AnimationName 35s ease infinite;
+    animation: AnimationName 35s ease infinite;  
+    overflow: hidden;
+}
+
+.radio-frame {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    opacity: 0%;
+    width: 100%;
+    height: 25vh;
+}
+
+.radio-buttons {
+    position: absolute;
+    bottom: 43%;
+    left: 29.5%;
+    color: white;
+    font-size: 1.6vh;
+    z-index: 1002;
+    letter-spacing: .4vh;
+}
+
+.radio-buttons i:hover {
+    color: rgba(255,255,255,.8);
+}
+
+.unv-radio {
+    position: absolute;
+    top: 58%;
+    left: -0.4%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 1002;
+    font-size: 1vh;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.unv-podcast {
+    display: none;
+    position: absolute;
+    top: 66%;
+    left: -0.4%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 1002;
+    font-size: 1vh;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.radio-header {
+    position: absolute;
+    width: 100%;
+    height: 6vh;
+    bottom: 2%;
+    left: 0%;
+    background-color: blue;
+}
+
+.enter-radio {
+    display: inline;
+    width: 50%;
+    height: 100%;
+    background-color: #7822db;
+    border-top: 0.8vh solid rgba(255, 255, 255, 0.445);
+    float: right;
+}
+
+.enter-podcast {
+    display: inline;
+    width: 50%;
+    height: 100%;
+    background-color: #9a60dd;
+    border-top: 0.8vh solid rgba(255, 255, 255, 0.445);
+    float: left;
+}
+
+.enter-radio i {
+    position: absolute;
+    right: 23%;
+    top: 40%;
+    font-size: 1.8vh;
+    color: rgb(255, 255, 255);
+}
+
+.enter-podcast i {
+    position: absolute;
+    left: 23%;
+    top: 40%;
+    font-size: 1.8vh;
+    color: rgb(255, 255, 255);
+}
+
+.enter-radio:hover {
+    background-color: #7822db;
+    transition: ease-in-out 0.2s;
+}
+
+.enter-podcast:hover {
+    background-color: #7822db;
+    transition: ease-in-out 0.2s;
+}
+
+.podcast-buttons {
+    position: absolute;
+    bottom: 34%;
+    left: 29.5%;
+    color: white;
+    font-size: 1.6vh;
+    z-index: 1002;
+    letter-spacing: .4vh;
+}
+
+.podcast-buttons i:hover {
+    color: rgba(255,255,255,.8);
+}

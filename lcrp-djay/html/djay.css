@@ -1,0 +1,264 @@
+.dj-table {
+    position: absolute;
+    bottom: 8%;
+    left: 46%;
+    width: 8%;
+    height: 14%;
+    background: rgb(181,63,176);
+    background: linear-gradient(0deg, rgba(181,63,176,1) 0%, rgba(89,11,89,1) 88%);
+    color: rgb(234, 201, 247);
+}
+
+.dj-table .fa-play {
+    color: #4d2555;
+    font-size: 1.7em;
+    position: absolute;
+    left: 33%;
+    top: 15%;
+}
+
+.dj-table .fa-play:hover {
+    opacity: 0.7;
+}
+
+.dj-table .fa-upload {
+    color: #4d2555;
+    font-size: 1.7em;
+    position: absolute;
+    right: 33%;
+    top: 15%;
+}
+
+.dj-table .fa-upload:hover {
+    opacity: 0.7;
+}
+
+.dj-table .sync-video {
+    background: rgb(32,32,32);
+    background: linear-gradient(0deg, rgba(32,32,32,1) 0%, rgba(51,51,51,1) 88%);
+    border: 0.15vh solid rgba(65, 65, 65, 0.8);
+    text-align: center;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: bolder;
+	font-size: 0.9em;
+    color: #df25d9;
+    position: absolute;
+    border-radius: 0.4vh;
+    left: 2.8%;
+    bottom: 4%;
+    width: 92%;
+    height: 2vh;
+	cursor: pointer;
+}
+
+.dj-table .sync-video:hover {
+	opacity: 0.9;
+}
+
+.dj-table .sync-video:active {
+	opacity: 1;
+	transform: scale(1.1);
+	transition: ease-in-out 0.1s;
+}
+
+.dj-table input:focus {
+    outline: none;
+    background-color: rgb(225, 175, 245);
+}
+
+.fas:hover {
+	opacity: 0.9;
+}
+
+.fas:active {
+	opacity: 1;
+	transform: scale(1.5);
+	transition: ease-in-out 0.1s;
+}
+
+.dj-table img {
+    position: absolute;
+    top: -5%;
+    left: 2%;
+    height: auto;
+    width: 95%;
+}
+
+.vol-tuner {
+    position: absolute;
+    top: 18%;
+    left: 20%;
+	width: 60%;
+	height: 60%;
+	border-radius: 100%;
+	border: none;
+	background: transparent;
+	box-shadow:
+		0 -70px 15px -68px #FFF /* tuner top flare */,
+		inset 0 71px 2px -70px #FFF /* tuner top flare */,
+		inset 0 2px 0 0px #404040 /* tuner top edge */,
+		inset 0 -2px 0 0px #1d1d1d /* tuner bottom edge */,
+		0 0 35px -35px #cc57c9 /*glow*/,
+		-2px 9px 15px -2px hsla(0,0%,0%,0.9) /* shadow */,
+		0 0 5px 3px #df25d9 /* ring inner */,
+		0 0 0px 7px #800079 /* ring outer */,
+		0 -1px 0px 8px #2d172c /* ring outer edge top shadow */,
+		0 1px 0px 8px #5f2f5c /* ring outer edge bottom highlight */,
+		0 -7px 15px 5px #844c81 /* base highlight */,
+		0 0 0px 20px #323 /* base */,
+		0 -1px 0px 20px #483e48 /* base contour highlight */,
+		0 0 0px 21px #1e0f1d /* base contour */,
+		0 0 55px 0px #cc57c9 /*glow*/,
+		0px 2px 4px 22px hsla(0,0%,0%,0.4) /* shadow */,
+		inset 151px 0px 20px -75px hsla(0,0%,60%,0.1) /* test */,
+		inset -151px 0px 20px -75px  hsla(0,0%,60%,0.1) /* test 2 */,
+		inset 0px 130px 10px -50px hsla(0,0%,0%,0.2) /* test 3*/,
+		inset 0px -125px 10px -50px  hsla(0,0%,0%,0.2) /* test 4 */,
+		inset 0 0 0 75px #282828 /* solid color */;
+	color: transparent;
+	text-align: center;
+	outline:none;
+	cursor: pointer;
+	-webkit-appearance:none;
+	transition: 1s;
+}
+.fa-over:hover ~ .vol-tuner{
+	box-shadow:
+		0 -70px 15px -68px #FFF /* tuner top flare */,
+		inset 0 71px 2px -70px #FFF /* tuner top flare */,
+		inset 0 2px 0 0px #404040 /* tuner top edge */,
+		inset 0 -2px 0 0px #1d1d1d /* tuner bottom edge */,
+		0 0 35px 0px #cc57c9 /*glow*/,
+		-2px 9px 15px -2px hsla(0,0%,0%,0.9) /* shadow */,
+		0 0 5px 3px #ee8aeb /* ring inner */,
+		0 0 0px 7px #ca00bf /* ring outer */,
+		0 -1px 0px 8px #2d172c /* ring outer edge top shadow */,
+		0 1px 0px 8px #5f2f5c /* ring outer edge bottom highlight */,
+		0 -7px 15px 5px #844c81 /* base highlight */,
+		0 0 0px 20px #323 /* base */,
+		0 -1px 0px 20px #483e48 /* base contour highlight */,
+		0 0 0px 21px #1e0f1d /* base contour */,
+		0 0 65px 5px #cc57c9 /*glow*/,
+		0px 2px 4px 22px hsla(0,0%,0%,0.4) /* shadow */,
+		inset 151px 0px 20px -75px hsla(0,0%,60%,0.1) /* test */,
+		inset -151px 0px 20px -75px  hsla(0,0%,60%,0.1) /* test 2 */,
+		inset 0px 130px 10px -50px hsla(0,0%,0%,0.2) /* test 3*/,
+		inset 0px -125px 10px -50px  hsla(0,0%,0%,0.2) /* test 4 */,
+		inset 0 0 0 75px #282828 /* solid color */;
+}
+
+#play-btn:hover ~ .vol-tuner{
+	box-shadow:
+		0 -70px 15px -68px #FFF /* tuner top flare */,
+		inset 0 71px 2px -70px #FFF /* tuner top flare */,
+		inset 0 2px 0 0px #404040 /* tuner top edge */,
+		inset 0 -2px 0 0px #1d1d1d /* tuner bottom edge */,
+		0 0 35px 0px #cc57c9 /*glow*/,
+		-2px 9px 15px -2px hsla(0,0%,0%,0.9) /* shadow */,
+		0 0 5px 3px #ee8aeb /* ring inner */,
+		0 0 0px 7px #ca00bf /* ring outer */,
+		0 -1px 0px 8px #2d172c /* ring outer edge top shadow */,
+		0 1px 0px 8px #5f2f5c /* ring outer edge bottom highlight */,
+		0 -7px 15px 5px #844c81 /* base highlight */,
+		0 0 0px 20px #323 /* base */,
+		0 -1px 0px 20px #483e48 /* base contour highlight */,
+		0 0 0px 21px #1e0f1d /* base contour */,
+		0 0 65px 5px #cc57c9 /*glow*/,
+		0px 2px 4px 22px hsla(0,0%,0%,0.4) /* shadow */,
+		inset 151px 0px 20px -75px hsla(0,0%,60%,0.1) /* test */,
+		inset -151px 0px 20px -75px  hsla(0,0%,60%,0.1) /* test 2 */,
+		inset 0px 130px 10px -50px hsla(0,0%,0%,0.2) /* test 3*/,
+		inset 0px -125px 10px -50px  hsla(0,0%,0%,0.2) /* test 4 */,
+		inset 0 0 0 75px #282828 /* solid color */;
+}
+
+.vol-tuner:hover {
+	box-shadow:
+		0 -70px 15px -68px #FFF /* tuner top flare */,
+		inset 0 71px 2px -70px #FFF /* tuner top flare */,
+		inset 0 2px 0 0px #404040 /* tuner top edge */,
+		inset 0 -2px 0 0px #1d1d1d /* tuner bottom edge */,
+		0 0 35px 0px #cc57c9 /*glow*/,
+		-2px 9px 15px -2px hsla(0,0%,0%,0.9) /* shadow */,
+		0 0 5px 3px #ee8aeb /* ring inner */,
+		0 0 0px 7px #ca00bf /* ring outer */,
+		0 -1px 0px 8px #2d172c /* ring outer edge top shadow */,
+		0 1px 0px 8px #5f2f5c /* ring outer edge bottom highlight */,
+		0 -7px 15px 5px #844c81 /* base highlight */,
+		0 0 0px 20px #323 /* base */,
+		0 -1px 0px 20px #483e48 /* base contour highlight */,
+		0 0 0px 21px #1e0f1d /* base contour */,
+		0 0 65px 5px #cc57c9 /*glow*/,
+		0px 2px 4px 22px hsla(0,0%,0%,0.4) /* shadow */,
+		inset 151px 0px 20px -75px hsla(0,0%,60%,0.1) /* test */,
+		inset -151px 0px 20px -75px  hsla(0,0%,60%,0.1) /* test 2 */,
+		inset 0px 130px 10px -50px hsla(0,0%,0%,0.2) /* test 3*/,
+		inset 0px -125px 10px -50px  hsla(0,0%,0%,0.2) /* test 4 */,
+		inset 0 0 0 75px #282828 /* solid color */;
+}
+
+.vol-tuner:focus {
+	cursor: n-resize;
+}
+input.vol-tuner::-webkit-outer-spin-button,
+input.vol-tuner::-webkit-inner-spin-button {
+	-webkit-appearance:none;
+}
+
+.dj-left{
+    position: absolute;
+    bottom: 5%;
+    left: 38%;
+    width: 8%;
+    height: 17%;
+    background: rgb(56,56,56);
+    background: linear-gradient(317deg, rgba(56,56,56,1) 32%, rgba(20,20,20,1) 100%);
+    border-top-left-radius: 0.4vh;
+    border-bottom-left-radius: 0.4vh;
+    border-bottom-right-radius: 22%;
+}
+
+.dj-right{
+    position: absolute;
+    bottom: 5%;
+    right: 38%;
+    width: 8%;
+    height: 17%;
+    background: rgb(56,56,56);
+    background: linear-gradient(47deg, rgba(56,56,56,1) 32%, rgba(20,20,20,1) 100%);
+    border-top-right-radius: 0.4vh;
+    border-bottom-right-radius: 0.4vh;
+    border-bottom-left-radius: 22%;
+}
+
+.dj-right i{
+    font-size: 1.2em;
+    position: absolute;
+    left: 44.5%;
+    z-index: 100;
+    color: #9e259a;
+}
+
+.dj-right i:hover {
+    transition: ease-in-out .1s;
+    color: #8d2189;
+    opacity: 0.8;
+    box-shadow: 0 0 65px 5px #cc57c9 /*glow*/;
+    background-color: rgba(204, 87, 201, 0.15) ;
+}
+
+.dj-left i{
+    font-size: 1.2em;
+    position: absolute;
+    left: 44.5%;
+    z-index: 100;
+    color: #9e259a;
+}
+
+.dj-left i:hover {
+    transition: ease-in-out .1s;
+    color: #8d2189;
+    opacity: 0.8;
+    box-shadow: 0 0 65px 5px #cc57c9 /*glow*/;
+    background-color: rgba(204, 87, 201, 0.15) ;
+}

@@ -1,0 +1,344 @@
+.valet-app {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(203, 175, 216);
+}
+
+.valet-app .phone-home-container {
+    position: absolute;
+    top: 96%;
+    left: 27%;
+    z-index: 300;
+    height: 0.4vh;
+    width: 7vw;
+    border-radius: 0.8vh;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.valet-app .phone-home-container:hover {
+    opacity: 0.4;
+}
+
+
+.valet-starter {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 228, 228);
+}
+
+.valet-starter-bg {
+    position: absolute;
+    top: 10%;
+    left: -40%;
+    height: 40vh;
+    width: 180%;
+    border-radius: 50%;
+}
+
+.valet-starter-bg {
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    background: linear-gradient(-45deg, #f86753, #1345a3, #9a59f0, #c748bc);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.valet-starter-txt {
+    position: absolute;
+    display: none;
+    top: 62%;
+    left: 27.5%;
+    width: 45%;
+    text-align: center;
+    font-size: 1.2vh;
+    color: #ffffff;
+}
+
+.valet-starter-bg img {
+    display: none;
+    position: absolute;
+    top: 18%;
+    left: 13%;
+    width: 70%;
+    height: auto;
+}
+
+.valet-request-service {
+    position: absolute;
+    top: 84%;
+    left: 20%;
+    background-color: white;
+    width: 60%;
+    height: 4vh;
+    text-align: center;
+    font-size: 1.4vh;
+    color: #9a59f0;
+    line-height: 4vh;
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.valet-request-service:hover {
+    background: linear-gradient(-45deg, #f86753, #1345a3, #9a59f0, #c748bc);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    transform: scale(1.1);
+}
+
+.valet-request-back {
+    display: none;
+    position: absolute;
+    top: 84%;
+    left: 20%;
+    background-color: white;
+    width: 60%;
+    height: 4vh;
+    text-align: center;
+    font-size: 1.4vh;
+    color: #9a59f0;
+    line-height: 4vh;
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.valet-request-back:hover {
+    background: linear-gradient(-45deg, #f86753, #1345a3, #9a59f0, #c748bc);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    transform: scale(1.1);
+}
+
+.valet-starter-plusinfo {
+    position: absolute;
+    top: 87%;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.6;
+    text-decoration: underline;
+}
+
+.valet-starter-plusinfo:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.valet-levels {
+    display: none;
+}
+
+.valet-level-1 {
+    position: absolute;
+    top: 62%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 1.1vh;
+    color: #ffffff;
+}
+
+.valet-level-2 {
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 1.1vh;
+    color: #ffffff;
+}
+
+.valet-level-3 {
+    position: absolute;
+    top: 74%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 1.1vh;
+    color: #ffffff;
+}
+
+.valet-level-4 {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 1.1vh;
+    color: #ffffff;
+}
+
+.valet-level-5 {
+    position: absolute;
+    top: 83%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 1.1vh;
+    color: #ffffff;
+}
+
+.valet-cars-header {
+    display: none;
+    position: absolute;
+    top: 23%;
+    font-size: 2.3vh;
+    left: 10%;
+    width: 80%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.valet-cars-header:hover {
+    color: #9a59f0;
+    transform: scale(1.05);
+}
+
+.valet-cars {
+    display: none;
+    position: absolute;
+    top: 28%;
+    left: 10%;
+    width: 80%;
+    height: 24vh;
+    background-color:  none;
+}
+
+.valet-cars{overflow:hidden; overflow-y:scroll;}
+.valet-cars::-webkit-scrollbar {
+    display: none;
+}
+
+.valet-vehicle {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    width: 120%;
+    height: 5vh;
+    margin-left: -2.1vw;
+    position: relative;
+    line-height: 5vh;
+    text-align: center;
+    margin-top: 2vh;
+    color: #9a59f0;
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.valet-vehicle:hover {
+    background: linear-gradient(-45deg, #f86753, #1345a3, #9a59f0, #c748bc);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    transform: scale(1.05);
+}
+
+.valet-vehicle-name {
+    position: absolute;
+    left: 8%;
+    bottom: 2%;
+    color: #9a59f0;
+    font-size: 1.5vh;
+
+}
+
+.valet-vehicle-pound {
+    position: absolute;
+    right: 8%;
+    top: 20%;
+    color: #5c5c5c;
+    font-size: 1.2vh;
+}
+
+.valet-vehicle-plate {
+    position: absolute;
+    left: 8.2%;
+    top: 20%;
+    color: #3e324d;
+    font-size: 1.2vh;
+}
+
+.valet-vehicle-platereg {
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    text-align: center;
+    background-color: white;
+    width: 70%;
+    height: 4vh;
+    border: none;
+    border-bottom: 0.2vh solid #9a59f0af;
+    outline: none;
+    color: #9a59f0;
+}
+
+.valet-vehicle-newplate {
+    display: none;
+    position: absolute;
+    left: 15%;
+    top: 27%;
+    background-color: white;
+    width: 70%;
+    height: 20vh;
+    box-shadow: 0vh 0.4vh 0.8vh rgba(0, 0, 0, 0.39);
+}
+
+.valet-vehicle-register {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    background-color: white;
+    width: 60%;
+    height: 4vh;
+    text-align: center;
+    font-size: 1.4vh;
+    color: #9a59f0;
+    line-height: 4vh;
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.valet-vehicle-register:hover {
+    background: linear-gradient(-45deg, #f86753, #1345a3, #9a59f0, #c748bc);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    transform: scale(1.1);
+}
+
+.valet-vehicle-cancel  {
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    background-color: white;
+    width: 60%;
+    height: 4vh;
+    text-align: center;
+    font-size: 1.4vh;
+    color: #9a59f0;
+    line-height: 4vh;
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+}
+
+.valet-vehicle-cancel:hover {
+    background: linear-gradient(-45deg, #f86753, #1345a3, #9a59f0, #c748bc);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    transform: scale(1.1);
+}

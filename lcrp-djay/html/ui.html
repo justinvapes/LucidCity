@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" href="./djay.css">
+	<script src="app.js"></script>
+</head>
+<body>
+	<div class="dj-table-container" style="display: none;">
+		<div class="dj-left">
+			<i id="play-btn" class="fas fa-play fa-over" style="top: 40%; cursor: pointer !important;"></i>
+			<div class="vol-tuner"></div>
+		</div>
+		<div class="dj-right">
+			<i id="dj-up" class="fas fa-plus fa-over" style="top: 28%; cursor: pointer !important;"></i>
+			<i id="dj-down" class="fas fa-minus fa-over" style="bottom: 33%; cursor: pointer !important;"></i>
+			<div class="vol-tuner"></div>
+		</div>
+		<div class="dj-table">
+			<img src="https://cdn.discordapp.com/attachments/278577280618332191/817459099078885406/DJlucidcity.png">
+			<div id="sync-video" class="sync-video">SYNC</div>
+		</div>
+	</div>
+	<div class="galaxy-frame" id="galaxy"></div>
+	<div class="cockatoos-frame" id="cockatoos"></div>
+	<div class="vanilla-frame" id="vanilla"></div>
+	<div class="bahamas-frame" id="bahamas"></div>
+	<div class="casino-frame" id="casino"></div>
+	<script>
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		var galaxy;
+		var cockatoos;
+		var vanilla;
+		var bahamas;
+		var casino;
+		function onYouTubeIframeAPIReady() {
+			galaxy = new YT.Player('galaxy', {
+			height: '0',
+			width: '0',
+			videoId: '36YnV9STBqc',
+			autoplay: '1',
+			});
+			cockatoos = new YT.Player('cockatoos', {
+			height: '0',
+			width: '0',
+			videoId: '36YnV9STBqc',
+			autoplay: '1',
+			});
+			vanilla = new YT.Player('vanilla', {
+			height: '0',
+			width: '0',
+			videoId: '36YnV9STBqc',
+			autoplay: '1',
+			});
+			bahamas = new YT.Player('bahamas', {
+			height: '0',
+			width: '0',
+			videoId: '36YnV9STBqc',
+			autoplay: '1',
+			});
+			casino = new YT.Player('casino', {
+			height: '0',
+			width: '0',
+			videoId: '36YnV9STBqc',
+			autoplay: '1',
+			});
+		}
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflJJaNgk/www-widgetapi.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<script src="/html/js/functions.js"></script>
+	<link rel="stylesheet" href="./css.css">
+	<head>
+		<meta charset="utf-8">
+		<title>rcore_television other support</title>
+	</head>
+	<body>
+		<div id = "black" class = "centered">
+
+		</div>
+	</body>
+</html>
+
+<script>
+	var result = getQueryParams();
+
+	updateFrame();
+
+	$("#black").append("<iframe src='"+ result.url +"'></iframe>");
+</script>

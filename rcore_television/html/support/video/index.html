@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src="/html/js/functions.js"></script>
+<link rel="stylesheet" href="./css.css">
+<script src="/html/js/functions.js"></script>
+<head>
+	<meta charset="utf-8">
+	<title>rcore_television video support</title>
+</head>
+<body>
+	<div>
+		<video onplay="updateTime()" controls autoplay>
+			<source>
+		</video>
+	</div>
+</body>
+</html>
+<script>
+var result = getQueryParams();
+
+var vol = result.volume;
+var time = result.time;
+
+updateFrame();
+
+$( document ).ready(function() {
+	$("source").attr("src", result.url);
+	$("video")[0].load();
+	$('video').trigger('play');
+});
+
+function updateTime(){
+	var player = $("video").get(0);
+
+	player.currentTime = time;
+	player.volume = 0;
+
+	setTimeout(UpdatVolume, 100);
+}
+
+function UpdatVolume(){
+	var player = $("video").get(0);
+	player.volume = GetNewVolume();
+    setTimeout(UpdatVolume, 100);
+}
+</script>

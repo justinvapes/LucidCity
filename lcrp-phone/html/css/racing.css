@@ -1,0 +1,213 @@
+.racing-app {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(243, 243, 243);
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.racing-flags {
+    position: absolute;
+    bottom: -5%;
+    left: 0%;
+    width: 100%;
+    height: 16vh;
+    background-image: url('../img/racing-flag.png');
+    background-size: cover;
+    background-position-y: 1.05vh;
+    background-position-x: -0.3vh;
+    background-repeat: no-repeat;
+}
+
+.racing-find {
+    position: absolute;
+    top: 38%;
+    left: 15%;
+    width: 70%;
+    height: 5vh;
+    line-height: 5vh;
+    background-color: rgb(255, 255, 255);
+    color: seagreen;
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    font-size: 1.4vh;
+    text-align: center;
+}
+
+.racing-find:hover {
+    color: rgb(255, 255, 255);
+    background-color: seagreen;
+    transform: scale(1.05);
+}
+
+.racing-find:active {
+    transform: scale(1);
+}
+
+.racing-exit {
+    position: absolute;
+    top: 49%;
+    left: 15%;
+    width: 70%;
+    height: 5vh;
+    line-height: 5vh;
+    background-color: rgb(255, 255, 255);
+    color: seagreen;
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    font-size: 1.4vh;
+    text-align: center;
+}
+
+.racing-exit:hover {
+    color: rgb(255, 255, 255);
+    background-color: seagreen;
+    transform: scale(1.05);
+}
+
+.racing-exit:active {
+    transform: scale(1);
+}
+
+.racing-cancel {
+    position: absolute;
+    top: 49%;
+    left: 15%;
+    width: 70%;
+    height: 5vh;
+    line-height: 5vh;
+    background-color: rgb(255, 255, 255);
+    color: seagreen;
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
+    font-size: 1.4vh;
+    text-align: center;
+}
+
+.racing-cancel:hover {
+    color: rgb(255, 255, 255);
+    background-color: seagreen;
+    transform: scale(1.05);
+}
+
+.racing-cancel:active {
+    transform: scale(1);
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: absolute;
+    top: 36%;
+    left: 40%;
+    width: 4vh;
+    height: 4vh;
+  }
+.lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 0.4vh;
+    width: 0.8vh;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+left: 0vh;
+animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+left: 1.6vh;
+animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+left: 3.2vh;
+animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+    0% {
+        top: 0.4vh;
+        height: 3.2vh;
+    }
+    50%, 100% {
+        top: 1.2vh;
+        height: 3.2vh;
+    }
+}
+
+.lds-looking {
+    color: seagreen;
+    position: absolute;
+    top: 46%;
+    left: 0%;
+    width: 100%;
+    font-size: 0.9vh;
+    font-weight: bold;
+    text-align: center;
+    -webkit-animation: breathing 5s ease-out infinite normal;
+    animation: breathing 5s ease-out infinite normal;
+    letter-spacing: 0.2vh;
+}
+
+.racing-finder {
+    display: none;
+}
+
+@-webkit-keyframes breathing {
+    0% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+      letter-spacing: 0.05vh;
+    }
+  
+    25% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      letter-spacing: 0.1vh;
+    }
+  
+    60% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+      letter-spacing: 0.05vh;
+    }
+  
+    100% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+      letter-spacing: 0.05vh;
+    }
+  }
+  
+  @keyframes breathing {
+    0% {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+      letter-spacing: 0.05vh;
+    }
+  
+    25% {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      letter-spacing: 0.1vh;
+    }
+  
+    60% {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+      letter-spacing: 0.05vh;
+    }
+  
+    100% {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+      letter-spacing: 0.05vh;
+    }
+  }
+  

@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phone</title>
+
+    <!-- CSS File's -->
+    <link rel="stylesheet" href="./css/services.css">
+    <link rel="stylesheet" href="./css/twitch.css">
+    <!--<link rel="stylesheet" href="./css/main.css">-->
+    <link rel="stylesheet" href="./css/airLines.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/tooltip.css">
+    <link rel="stylesheet" href="./css/settings.css">
+    <link rel="stylesheet" href="./css/phone.css">
+    <link rel="stylesheet" href="./css/twitter.css">
+    <link rel="stylesheet" href="./css/bank.css">
+    <link rel="stylesheet" href="./css/whatsapp.css">
+    <link rel="stylesheet" href="./css/garage.css">
+    <link rel="stylesheet" href="./css/mail.css">
+    <link rel="stylesheet" href="./css/invest.css">
+    <!--<link rel="stylesheet" href="./css/meos.css">-->
+    <!--<link rel="stylesheet" href="./css/crypto.css">-->
+    <link rel="stylesheet" href="./css/racing.css">
+    <!--<link rel="stylesheet" href="./css/houses.css">-->
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/parties.css">
+    <link rel="stylesheet" href="./css/anonChat.css">
+    <link rel="stylesheet" href="./css/radio.css">
+    <link rel="stylesheet" href="./css/ph.css">
+    <link rel="stylesheet" href="./css/valet.css">
+
+    <!-- CDN's -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script> <!-- Color CDN -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-iKbFRxucmOHIcpWdX9NTZ5WETOPm0Goy0WmfyNcl52qSYtc2Buk0NCe6jU1sWWNB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!-- Bootstrap -->
+</head>
+    <body style="background-color: transparent !important";>
+        <div class="phoneNot">
+            <img class="phoneNotImg" src="./img/cut-phone.png">
+            <div class="phoneNotBG"></div>
+            <p class="phoneNotTxt"></p>
+            <p class="phoneNotTitle"></p>
+            <i class="fas fa-wifi" id="phoneNotFas"></i>
+        </div>
+        <div class="phoneRobNot">
+            <img class="phoneNotImg" src="./img/cut-phone.png">
+            <div class="phoneNotRobBG"></div>
+            <i class="fad fa-check-circle" id='acceptJobNot'></i>
+            <i class="fad fa-times-circle" id='denyJobNot'></i>
+            <p class="phoneNotRobTxt"></p>
+            <p class="phoneNotRobTitle"></p>
+            <i class="fas fa-mask" id="phoneNotRobFas"></i>
+        </div>
+        <div class="ph-frame" style="display: none;">
+            <img src="./img/iphone-12.png" class="ph-img">
+            <div class="ph-background"></div>
+            <div class="phone-header">
+                <div id="phone-time">03:45</div>
+                <div id="phone-icons">
+                    <i class="fas fa-wifi" id="phone-wifi"></i>
+                    <!--<i class="fas fa-signal" id="phone-signal" data-toggle="tooltip" data-placement="top" title="Sprint 5G"></i>-->
+                    <i class="fas fa-battery-full" id="phone-battery"></i>
+                </div>
+            </div>
+            <div class="ph-app-container">
+                <div class="phone-notification-container">
+                    <div class="notification-icon"></div>
+                    <div class="notification-title"></div>
+                    <div class="notification-text"></div>
+                </div>
+                <div class="phone-job-notification-container">
+                    <div class="notification-icon"></div>
+                    <div class="notification-rob-title"></div>
+                    <div class="notification-rob-btns">
+                        <i class='fad fa-check-circle' id='acceptJobInPh'></i>
+                        <i class='fad fa-times-circle' id='denyJobInPh'></i>
+                    </div>
+                    <div class="notification-rob-text"></div>
+                </div>
+                <div class="phone-top-applications">
+                    <div class="phone-application" id="twitter-block" data-appslot="twitter" style="background-color: #1da1f2;"><i class="fab fa-twitter"></i><p>Twitter</p></div>
+                    <div class="phone-application" id="services-block" data-appslot="services" style="background-color: #034b27;"><i class="fas fa-clipboard-list"></i><p>Services</p></div>
+                </div>
+                <div class="phone-middle-applications">
+                    <div class="phone-application" id="general-block" data-appslot="general" style="background-color: #5c2695;"><i class="fas fa-user-alt"></i><p>General</p></div>
+                    <div class="phone-application" id="garage-block" data-appslot="garage" style="background-color: #575fcf;"><i class="fas fa-warehouse"></i><p>Vehicles</p></div>
+                    <div class="phone-application" id="bank-block" data-appslot="bank" style="background-color: #9c88ff;"><i class="fas fa-university"></i><p>Bank</p></div>
+                    <div class="phone-application" id="advert-block" data-appslot="advert" style="background-color: #ff8f1a;"><i class="fas fa-ad"></i><p>Adverts</p></div>
+                </div>
+                <div class="phone-middle-two-applications">
+                    <div class="phone-application" id="anonChat-block" data-appslot="anonChat" style="background-color: #2d132c;"><i class="fas fa-user-secret"></i><p>Dark Chat</p></div>
+                    <div class="phone-application" id="airLines-block" data-appslot="airLines" style="background-color: #e6ba40;"><i class="fas fa-plane-departure"></i><p>Airlines</p></div>
+                </div>
+                <div class="phone-middle-bottom-applications">
+                    <div class="phone-application" id="twitch-block" data-appslot="twitch" style="background-color: #6441a5;"><i class="fas fa-tv"></i><p>LC Live</p></div>
+                    <div class="phone-application" id="radio-block" data-appslot="radio" style="background-color: #c3aae0;"><i class="fas fa-broadcast-tower"></i><p>LC Radio</p></div>
+                    <div class="phone-application" id="valet-block" data-appslot="valet" style="background-color: #e9513d;"><i class="fas fa-street-view"></i><p>Valet</p></div>
+                    <div class="phone-application" id="racing-block" data-appslot="racing" style="background-color: rgb(14, 143, 57);"><i class="fas fa-flag-checkered"></i><p>Racing</p></div>
+                </div>
+                <div class="phone-middle-bottom-bottom-applications">
+                    <div class="phone-application" id="parties-block" data-appslot="parties" style="background-color: rgb(43, 43, 43);"><i class="fas fa-mask"></i><p>Jobs</p></div>
+                    <!--<div class="phone-application" id="valet-block" data-appslot="valet" style="background-color: #e9513d;"><i class="fas fa-street-view"></i><p>Valet</p></div>
+                    <div class="phone-application" id="camera-block" data-appslot="camera" style="background-color: #4b4b4b;"><i class="fas fa-camera-retro"></i><p>Camera/p></div>-->
+                </div>
+                <div class="phone-bottom-applications">
+                    <div class="phone-application" id="phone-block" data-appslot="phone" style="background-color: #04b543; margin-left: 0.8vh !important;"><i class="fa fa-phone-alt"></i></div>
+                    <div class="phone-application" id="whatsapp-block" data-appslot="whatsapp" style="background-color: #069de1;"><i class="fas fa-comment-dots"></i></div>
+                    <div class="phone-application" id="mail-block" data-appslot="mail" style="background-color: #ff002f;"><i class="fas fa-envelope"></i></div>
+                    <div class="phone-application" id="settings-block" data-appslot="settings" style="background-color: #636e72;"><i class="fa fa-cog"></i></div>
+                </div>
+                <div class="phone-weather-container">
+                    <p class="time-txt">74º</p>
+                    <p class="time-desc">Cloudy</p>
+                    <i class="fas fa-cloud-moon-rain" id="cloud-rain"></i>
+                </div>
+                <div class="phone-btc-container">
+                    <p class="btc-txt">Lucid Assets</p>
+                    <img src="./img/invest-icon.png" class="bit-coin" style="position: absolute; top: 1.1vh; left: 0.4vh; width: 4.7vh; height: auto;">
+                </div>
+                <div class="invest-app">
+                    <div class="inv-back"></div>
+                    <div class="invest-main">
+                        <div class="phone-invest-container">
+                        </div>
+                        <p class="header-title">Lucid Assets</p>
+                        <p class="header-date"></p>
+                        <nav>
+                            <ul class="invest-assets-ul">
+                            </ul>
+                        </nav>
+                        <div class="invest-footer">
+                            <div class="footer-line"></div>
+                            <img src="./img/footer-chart3.png" style="position: absolute; top: 15%; left: 2%; width: 50%; height: 56%; z-index: 1001; border-radius: 0.8vh; border: 0.0vh solid rgba(63, 63, 63, 0.76);">
+                            <p class="footer-risk">Trading Derivatives carries a high level of risk to your capital and you should only trade with money you can afford to lose. Trading Derivatives may not be suitable for all investors, so please ensure that you fully understand the risks involved.</p>
+                        </div>
+                    </div>
+                    <div class="invest-asset" style="display: none;">
+                        <div id="infinite" class="highway-slider">
+                            <div class="slide-container ">
+                                <ul class="highway-lane">
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="number" id="asset-amount" class="asset-amount" min=0 value="0" oninput="validity.valid||(value='');"></input>
+                        <div class="phone-asset-back">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="chart-abv"></div>
+                        <div class="chart-name"></div>
+                        <div id="chartContainer" class="chart-div"><canvas id="myChart"></canvas></div>
+                        <div class="chart-frame"></div>
+                        <div class="chart-desc"></div>
+                        <div class="chart-left-desc">
+                            <p class="chart-info-value"></p>
+                            <p class="chart-info-max"></p>
+                            <p class="chart-info-min"></p>
+                        </div>
+                        <div class="chart-right-desc">
+                            <p class="chart-info-vol"></p>
+                            <p class="chart-info-fib"></p>
+                            <p class="chart-info-nls"></p>
+                        </div>
+                        <div class="asset-person-desc">
+                            <p>Capital:</p>
+                            <p>Asset Amount:</p>
+                            <p>Asset Worth:</p>
+                        </div>
+                        <div class="asset-person-desc-right">
+                            <p class="asset-person-wallet"></p>
+                            <p class="asset-person-amount"></p>
+                            <p class="asset-person-dollars"></p>
+                        </div>
+                        <div class="buy-asset">BUY</div>
+                        <div class="sell-asset">SELL</div>
+                    </div>
+                </div>
+                <div class="phone-application-container">
+                    <div class="settings-app">
+                        <div class="settings-app-header"><p>Settings</p></div>
+                        <div class="phone-home-container">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+
+                        <div class="settings-app-tab-appereance">
+                            <div class="settings-app-tab-header"><p>Appearance</p></div>
+                            <div class="settings-app-tab" data-settingstab="background">
+                                <div class="settings-tab-icon"><i class="fas fa-palette" style="color: #9b59b6;"></i></div>
+                                <div class="settings-tab-title"><p>Background</p></div>
+                                <div class="settings-tab-description"><p>Standard</p></div>
+                            </div>
+                            <div class="settings-app-tab" data-settingstab="profilepicture">
+                                <div class="settings-tab-icon"></div>
+                                <div class="settings-tab-title"><p>Profile picture</p></div>
+                                <div class="settings-tab-description"><p>Standard</p></div>
+                            </div>
+                        </div>
+
+
+                        <div class="settings-app-tab-information">
+                            <div class="settings-app-tab-header"><p>Information</p></div>
+                            <div class="settings-app-tab secondTab" data-settingstab="myPhone">
+                                <div class="settings-tab-icon"><i class="fas fa-phone-alt" style="color: #e67e22;"></i></div>
+                                <div class="settings-tab-title"><p>My Number</p></div>
+                                <div class="settings-tab-description" id="myPhoneNumber"><p>0612345678</p></div>
+                            </div>
+                            <div class="settings-app-tab secondTab" data-settingstab="numberrecognition">
+                                <!-- Rounded switch -->
+                                <label class="switch">
+                                    <input class="numberrec-box" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+
+                                <div class="settings-tab-icon"><i class="fas fa-user-slash" style="color: #e67e22;"></i></div>
+                                <div class="settings-tab-title"><p>Anonymous Calling</p></div>
+                                <div class="settings-tab-description" id="numberrecognition"><p>Off</p></div>
+                            </div>
+                        </div>
+
+                        <div class="settings-background-tab">
+                            <div class="settings-app-header"><p>Background</p></div>
+
+                            <div class="background-options">
+                                <div class="background-option" data-background="backgroundimage">
+                                    <div class="background-option-icon"> <i class="fas fa-paint-brush"></i> </div>
+                                    <div class="background-option-title"> Standard </div>
+                                    <div class="background-option-description"> This is the default background</div>
+                                    <div class="background-option-current"><i class="fas fa-check-circle"></i></div>
+                                </div>
+                                <div class="background-option" data-background="custom-background">
+                                    <div class="background-option-icon"><i class="fas fa-paint-brush"></i></div>
+                                    <div class="background-option-title">Custom</div>
+                                    <div class="background-option-description"> Your own background with a URL</div>
+                                </div>
+                            </div>
+
+                            <div class="background-buttons">
+                                <div class="background-button" id="accept-background">
+                                    <p>Confirm</p>
+                                </div>
+                                <div class="background-button" id="cancel-background">
+                                    <p>Cancel</p>
+                                </div>
+                            </div>
+
+                            <div class="background-custom">
+                                <div class="background-custom-title">Own Background</div>
+                                <input type="text" class="custom-background-input" placeholder="URL (.jpg/.png)" spellcheck="false">
+
+                                <div class="background-custom-buttons">
+                                    <div class="custom-background-button" id="accept-custom-background"><p>Confirm</p></div>
+                                    <div class="custom-background-button" id="cancel-custom-background"><p>Cancel</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-profilepicture-tab">
+                            <div class="settings-app-header"><p>Profile picture</p></div>
+
+                            <div class="profilepicture-options">
+                                <div class="profilepicture-option" data-profilepicture="default">
+                                    <div class="profilepicture-option-icon"> <i class="fas fa-paint-brush"></i> </div>
+                                    <div class="profilepicture-option-title"> Standard </div>
+                                    <div class="profilepicture-option-description"> Default profile picture.</div>
+                                    <div class="profilepicture-option-current"><i class="fas fa-check-circle"></i></div>
+                                </div>
+                                <div class="profilepicture-option" data-profilepicture="custom-profilepicture">
+                                    <div class="profilepicture-option-icon"><i class="fas fa-paint-brush"></i></div>
+                                    <div class="profilepicture-option-title">Custom</div>
+                                    <div class="profilepicture-option-description"> Your own profile picture with a URL</div>
+                                </div>
+                            </div>
+
+                            <div class="profilepicture-buttons">
+                                <div class="profilepicture-button" id="accept-profilepicture">
+                                    <p>Confirm</p>
+                                </div>
+                                <div class="profilepicture-button" id="cancel-profilepicture">
+                                    <p>Cancel</p>
+                                </div>
+                            </div>
+
+                            <div class="profilepicture-custom">
+                                <div class="profilepicture-custom-title">Custom profile picture</div>
+                                <input type="text" class="custom-profilepicture-input" placeholder="URL (.jpg/.png)" spellcheck="false">
+
+                                <div class="profilepicture-custom-buttons">
+                                    <div class="custom-profilepicture-button" id="accept-custom-profilepicture"><p>Confirm</p></div>
+                                    <div class="custom-profilepicture-button" id="cancel-custom-profilepicture"><p>Cancel</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-call-app">
+                        <div class="phone-call-incoming">
+                            <div class="phone-call-incoming-title">Incoming Call</div>
+                            <div class="phone-call-incoming-caller">Test</div>
+                            <div class="phone-call-incoming-picture"></div>
+
+                            <i class="fas fa-phone" id="incoming-answer"></i>
+                            <i class="fas fa-phone" id="incoming-deny"></i>
+                        </div>
+
+                        <div class="phone-call-outgoing">
+                            <div class="phone-call-outgoing-title">Calling</div>
+                            <div class="phone-call-outgoing-caller">Test</div>
+                            <div class="phone-call-outgoing-picture"></div>
+
+                            <i class="fas fa-phone" id="outgoing-cancel"></i>
+                        </div>
+
+                        <div class="phone-call-ongoing">
+                            <div class="phone-call-ongoing-title">Call ongoing</div>
+                            <div class="phone-call-ongoing-caller">Test</div>
+                            <div class="phone-call-ongoing-picture"></div>
+                            <div class="phone-call-ongoing-time">05:05</div>
+
+                            <i class="fas fa-phone" id="ongoing-cancel"></i>
+                        </div>
+                    </div>
+
+                    <div class="radio-app" id="twitch-embed">
+                        <div class="radio-frame" id="radioplayer"></div>
+                        <img src="./img/LCRadio.png" class="radio-logo" style="position: absolute; top: 30%; left: -1%; width: 26vh; height: auto; z-index: 1001;">
+                        <div class="radio-header">
+                            <div class="enter-radio"><i class=" fas fa-broadcast-tower"></i></div>
+                            <div class="enter-podcast"><i class=" fas fa-microphone-alt"></i></div>
+                        </div>
+                        <div class="radio-buttons">
+                            <i class="radio-minus fas fa-minus"></i>
+                            <i id="radio-pstop" class="radio-play fas fa-play"></i>
+                            <i class="radio-home fas fa-home"></i>
+                            <i class="radio-plus fas fa-plus"></i>
+                        </div>
+                        <div class="unv-radio">Currently not playing your favorite tracks!</div>
+                        <img src="./img/LCPodcast.png" class="podcast-logo" style="display: none; position: absolute; top: 19%; left: -1%; width: 26vh; height: auto; z-index: 1001;">
+                        <div class="podcast-buttons" style="display: none;">
+                            <i class="podcast-minus fas fa-minus"></i>
+                            <i id="podcast-pstop" class="podcast-play fas fa-play"></i>
+                            <i class="podcast-home fas fa-home"></i>
+                            <i class="podcast-plus fas fa-plus"></i>
+                        </div>
+                        <div class="unv-podcast">There are no live podcasts!</div>
+                    </div>
+
+                    <div class="twitch-app" id="twitch-embed">
+                        <div class="youtube-unavailable">
+                            <div class="unv-txt">We are not live yet!</div>
+                        </div>
+                        <div class="youtube-frame" id="player" ></div>
+                        <div class="youtube-top">
+                            <div class="yt-buttons">
+                                <i class="minus-yt fas fa-minus"></i>
+                                <i class="out-yt fas fa-home"></i>
+                                <i class="plus-yt fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <script>
+                        var tag = document.createElement('script');
+                        tag.src = "https://www.youtube.com/iframe_api";
+                        var firstScriptTag = document.getElementsByTagName('script')[0];
+                        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                        var player;
+                        var radioplayer;
+                        function onYouTubeIframeAPIReady() {
+                            player = new YT.Player('player', {
+                                height: '100%',
+                                width: '100%',
+                                videoId: '4drP-MKAEvs',
+                                autoplay: '1',
+                                origin: "https://www.youtube.com",
+                                playsinline : 1,
+                                events: {
+                                    'onStateChange': onPlayerStateChange
+                                }
+                            });
+                        }
+
+                        function onPlayerStateChange() {
+                            if (event.data == YT.PlayerState.ENDED) {
+                                $(".youtube-frame").hide();
+                                $(".youtube-unavailable").show();
+                            }
+                        }
+                        function onPlayerStateChanged() {
+                            if (event.data == YT.PlayerState.ENDED) {
+                                $(".unv-radio").show();
+                            }
+                        }
+                        </script>
+                    </div>
+
+                    <div class="airLines-app">
+                        <img src="./img/lucid_airlines2.png" class="airLines-logo">
+                        <div class="get-new">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="phone-home-container get-out">
+                        </div>
+                        <div class="airLines-flights">
+                            <nav>
+                                <ul class="airLines-flights-ul">
+                                    <!--<div class="flight" id ="1"><div class="flight-info-1"><p class="destinationid">CAIO PERICO #745</p><p class="hour">Departure: 124 min</p></div><div class="flight-info-2"><p class="nocu">7/20</p><p class="preco">200 $</p></div></div>-->
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="airLines-form" style="display: none;">
+                            <p class="create-flight">CREATE FLIGHT</p>
+                            <label class="air-preco-txt" for="air-preco">Ticket price:</label>
+                            <input type="number" id="air-preco" class="air-preco" min=0 value="100" oninput="validity.valid||(value='');"></input>
+                            <label class="air-nocu-txt" for="air-nocu">Number of seats:</label>
+                            <input type="number" id="air-nocu" class="air-nocu" min=0 value="1" oninput="validity.valid||(value='');"></input>
+                            <label class="air-hour-txt" for="air-hour">Flight departs in (mins):</label>
+                            <input type="number" style="width: 74%; height: 2vh;" id="air-hour" class="air-hour" min=0 value="5" oninput="validity.valid||(value='');"></input>
+                            <label class="air-destinations-txt" for="air-destinations">Choose a destination:</label>
+                            <select id="air-destinations" name="destinations" class="air-destinations">
+                                <option value="Cayo Perico">Cayo Perico</option>
+                                <option value="Sandy Shores Airport">Sandy Shores Airport</option>
+                                <option value="Lucid City Airport">Lucid City Airport</option>
+                            </select>
+                        </div>
+                        <div class="submit-flight">Submit</div>
+                    </div>
+
+
+                    <div class="phone-app">
+                        <div class="phone-home-container">
+                        </div>
+                        <div class="phone-app-header">
+                            <p>Phone</p>
+                            <span id="total-contacts">0 Contacts</span>
+                        </div>
+
+                        <div class="phone-contacts">
+                            <div class="phone-contacts-header">
+                                <input type="text" id="contact-search" placeholder="Contact Name" spellcheck="false">
+                                <i id="phone-search-icon" class="fas fa-search"></i>
+                                <i id="phone-plus-icon" class="fas fa-plus"></i>
+                            </div>
+
+                            <div class="phone-contact-list">
+                                <!-- <div class="phone-contact" data-contactid="1">
+                                    <div class="phone-contact-firstletter">P</div>
+                                    <div class="phone-contact-name">Pieter Post</div>
+                                    <div class="phone-contact-actions"><i class="fas fa-sort-down"></i></div>
+
+                                    <div class="phone-contact-action-buttons">
+                                        <i class="fas fa-phone-volume"></i>
+                                        <i class="fas fa-comment"></i>
+                                        <i class="fas fa-user-edit"></i>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+
+                        <div class="phone-recent">
+                            <div class="phone-recent-header"><p>Phone</p></div>
+
+                            <div class="phone-recent-calls">
+                                <!-- <div class="phone-recent-call"> <div class="phone-recent-call-image">P</div> <div class="phone-recent-call-name">Pieter Post</div> <div class="phone-recent-call-type"><i class="fas fa-phone-slash"></i></div> <div class="phone-recent-call-time">12:05</div> </div> -->
+                            </div>
+                        </div>
+
+                        <div class="phone-suggestedcontacts">
+                            <div class="phone-suggestedcontacts-header">
+                                Suggested Contacts
+                                <p class="amount-of-suggested-contacts">0 contacts</p>
+                            </div>
+
+                            <div class="suggested-contacts">
+                                <!-- <div class="suggested-contact"> <i class="fas fa-exclamation-circle"></i> <span class="suggested-name">Jay Nandes &middot; <span class="suggested-number">0612345678</span></span> </div> -->
+                                <!-- <div class="suggested-contact">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <span class="suggested-name">Jay Nandes &middot; <span class="suggested-number">0612345678</span></span>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="phone-keypad noselect">
+                            <div class="phone-keypad-header"><p>Phone</p></div>
+                            <div id="phone-keypad-input"></div>
+
+                            <div class="phone-keypad-keys">
+                                <div class="phone-keypad-key" data-keypadvalue="1">1</div>
+                                <div class="phone-keypad-key" data-keypadvalue="2">2</div>
+                                <div class="phone-keypad-key" data-keypadvalue="3">3</div>
+                                <div class="phone-keypad-key" data-keypadvalue="4">4</div>
+                                <div class="phone-keypad-key" data-keypadvalue="5">5</div>
+                                <div class="phone-keypad-key" data-keypadvalue="6">6</div>
+                                <div class="phone-keypad-key" data-keypadvalue="7">7</div>
+                                <div class="phone-keypad-key" data-keypadvalue="8">8</div>
+                                <div class="phone-keypad-key" data-keypadvalue="9">9</div>
+                                <div class="phone-keypad-key" data-keypadvalue="*">*</div>
+                                <div class="phone-keypad-key" data-keypadvalue="0">0</div>
+                                <div class="phone-keypad-key" data-keypadvalue="#">#</div>
+                            </div>
+                            <div class="phone-keypad-key-call"><i class="fas fa-phone-alt"></i></div>
+                        </div>
+
+                        <div class="phone-add-contact">
+                            <div class="phone-add-contact-header"><p>Add Contact</p></div>
+
+                            <i id="phone-add-contact-name-icon" class="fas fa-user"></i>
+                            <input type="text" class="phone-add-contact-name" placeholder="Contact name" required spellcheck="false">
+
+                            <i id="phone-add-contact-number-icon" class="fas fa-phone-alt"></i>
+                            <input type="number" class="phone-add-contact-number" placeholder="Phone number" required spellcheck="false">
+
+                            <i id="phone-add-contact-iban-icon" class="fas fa-money-check"></i>
+                            <input type="text" class="phone-add-contact-iban" placeholder="Bank nr. (Not required)" required spellcheck="false">
+
+                            <div class="phone-add-contact-buttons">
+                                <div class="phone-add-contact-button" id="add-contact-save"><p>Save</p></div>
+                                <div class="phone-add-contact-button" id="add-contact-cancel"><p>Cancel</p></div>
+                            </div>
+                        </div>
+
+                        <div class="phone-edit-contact">
+                            <div class="phone-edit-contact-header"><p>Edit Contact</p></div>
+
+                            <i id="phone-edit-contact-name-icon" class="fas fa-user"></i>
+                            <input type="text" class="phone-edit-contact-name" placeholder="Contact name" required spellcheck="false">
+
+                            <i id="phone-edit-contact-number-icon" class="fas fa-phone-alt"></i>
+                            <input type="number" class="phone-edit-contact-number" placeholder="Phone number" required spellcheck="false">
+
+                            <i id="phone-edit-contact-iban-icon" class="fas fa-money-check"></i>
+                            <input type="text" class="phone-edit-contact-iban" placeholder="Bank nr. (Not required)" required spellcheck="false">
+
+                            <div class="phone-edit-contact-buttons">
+                                <div class="phone-edit-contact-button" id="edit-contact-save"><p>Save</p></div>
+                                <div class="phone-edit-contact-button" id="edit-contact-delete"><p>Delete</p></div>
+                                <div class="phone-edit-contact-button" id="edit-contact-cancel"><p>Cancel</p></div>
+                            </div>
+                        </div>
+
+                        <div class="phone-app-footer">
+                            <div class="phone-app-footer-button" data-phonefootertab="suggestedcontacts">
+                                <p>Suggested</p>
+                            </div>
+                            <div class="phone-app-footer-button" data-phonefootertab="keypad">
+                                <p>Keypad</p>
+                            </div>
+                            <div class="phone-app-footer-button" data-phonefootertab="recent">
+                                <p>Recent</p>
+                            </div>
+                            <div class="phone-app-footer-button phone-selected-footer-tab" data-phonefootertab="contacts">
+                                <p>Contacts</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="garage-app">
+                        <div class="phone-home-container">
+                        </div>
+                        <div class="garage-app-header">
+                            My Garage
+                        </div>
+                        <div class="garage-homescreen">
+                            <div class="garage-vehicles">
+                                <!-- <div class="garage-vehicle">
+                                    <span class="garage-vehicle-firstletter">B</span>
+                                    <span class="garage-vehicle-name">BMW M5</span>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="garage-detailscreen">
+                            <div class="garage-cardetails">
+                                <div class="vehicle-brand"><span class="vehicle-detail">Brand</span><span class="vehicle-answer">BMW M5</span></div>
+                                <div class="vehicle-model"><span class="vehicle-detail">Model</span><span class="vehicle-answer">BMW M5</span></div>
+                                <div class="vehicle-plate"><span class="vehicle-detail">Plate</span><span class="vehicle-answer">BMW M5</span></div>
+                                <div class="vehicle-garage"><span class="vehicle-detail">Garage</span><span class="vehicle-answer">BMW M5</span></div>
+                                <div class="vehicle-status"><span class="vehicle-detail">Status</span><span class="vehicle-answer">BMW M5</span></div>
+                                &nbsp;
+                                <div class="vehicle-fuel"><span class="vehicle-detail">Fuel</span><span class="vehicle-answer">BMW M5</span></div>
+                                <div class="vehicle-engine"><span class="vehicle-detail">Engine</span><span class="vehicle-answer">BMW M5</span></div>
+                                <div class="vehicle-body"><span class="vehicle-detail">Body</span><span class="vehicle-answer">BMW M5</span></div>
+
+                                <div class="garage-cardetails-footer">
+                                    BACK
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-app">
+                        <div class="phone-home-container"></div>
+                        <div class="services-header">
+                            <p class="services-p">SERVICES</p>
+                            <ul class="services-list">
+                                <div class="service" id="realestate-button" style="background-color: rgb(226, 226, 226);"><img src="./img/real_estate.png" class="realestate-logo"><div class="realestate-header">REAL ESTATE</div></div>
+                                <div class="service" id="taxi-button"  style="background-color: rgb(14, 14, 14);"><img src="./img/service-taxi.png" class="taxi-logo"></div>
+                                <div class="service" id="lawyer-button"  style="background-color: rgb(73, 34, 34);"><img src="./img/lawyer-logo.png" class="lawyer-logo"><div class="lawyer-header">LAWYERS</div></div>
+                                <!--<div class="flight" id ="1"><div class="flight-info-1"><p class="destinationid">CAIO PERICO #745</p><p class="hour">Departure: 124 min</p></div><div class="flight-info-2"><p class="nocu">7/20</p><p class="preco">200 $</p></div></div>-->
+                            </ul>
+                            <ul class="services-specific-list">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Real estate app 
+                    <div class="realestate-app">
+                        <div class="realestate-header">
+                            <p>Real Estate Agents</p>
+                            <span>Available brokers</span>
+                            <ul class="realestate-list">
+                                <div class="flight" id ="1"><div class="flight-info-1"><p class="destinationid">CAIO PERICO #745</p><p class="hour">Departure: 124 min</p></div><div class="flight-info-2"><p class="nocu">7/20</p><p class="preco">200 $</p></div></div>
+                            </ul>
+                        </div>
+
+
+                    </div> -->
+                    <div class="valet-app">
+                        <div class="phone-home-container"></div>
+                        <div class="valet-starter">
+                            <div class="valet-starter-bg">
+                                <img class="valet-starter-img" src="./img/valet-logo.png"></img>
+                                <p class="valet-starter-txt">Welcome to Lucid City private valet service! You ask, we deliver! We charge $1000 per car delivery. We do not account for any damages while using our service.</p>
+                                <div class="valet-levels">
+                                    <p class="valet-level-1">Level 1 - Register 1 Car</p>
+                                    <p class="valet-level-2">Level 2 - Register 1 Car w/ impound access</p>
+                                    <p class="valet-level-3">Level 3 - Register 3 Cars w/ impound access</p>
+                                    <p class="valet-level-4">For pricing information check</p>
+                                    <p class="valet-level-5">https://store.lucidcityrp.com</p>
+                           
+                                </div>
+                                <p class="valet-starter-plusinfo">+info</p>
+                            </div>
+                            <p class="valet-cars-header">Vehicles</p>
+                            <ul class="valet-cars">
+                                <!--<div class="valet-vehicle">1</div>-->
+                            </ul>
+                            <div class="valet-vehicle-newplate">
+                                <input class="valet-vehicle-platereg" type="text" maxlength="25"><br><br>
+                                <div class="valet-vehicle-register">Register</div>
+                                <div class="valet-vehicle-cancel">Cancel</div>
+                            </div>
+                            <div class="valet-request-service">My cars</div>
+                            <div class="valet-request-back">Back</div>
+                        </div>
+                    </div>
+
+                    <div class="racing-app">
+                        <div class="racing-starter">
+                            <div class="racing-find">FIND RACE</div>
+                            <div class=" phone-home-container racing-exit">EXIT</div>
+                        </div>
+                        <div class="racing-finder">
+                            <div class="lds-facebook"><div></div><div></div><div></div></div>
+                            <p class="lds-looking">LOOKING FOR NEARBY RACES...</p>
+                            <div class="racing-cancel">CANCEL</div>
+                        </div>
+                        <div class="racing-flags"></div>
+                    </div>
+
+                    <div class="parties-app">
+                        <div class="phone-home-container"></div>
+                        <!--<img src="./img/parties-icon.png" class="parties-logo">-->
+                        <div class="parties-header">
+                            <img src="./img/parties-icon.png" class="parties-logo">
+                            <p class="parties-logo-txt">JOBS</p>
+                        </div>
+                        <p class="parties-header-txt">Invites</p>
+                        <ul class="parties-invites"></ul>
+                        <p class="no-inv">No pending invites!</p>
+                        <div class="parties-option option-1">GROUPS</div>
+                        <div class="parties-menu">
+                            <div class="parties-header">
+                                <img src="./img/parties-icon.png" class="parties-logo">
+                                <p class="parties-logo-txt">JOBS</p>
+                            </div>
+                            <ul class="groups">
+                                <!--<div class="groups-user"><p class="groups-user-number">3004567899</p><p class="groups-user-name">rafael matos</p></div>-->
+                            </ul>
+                            <div class="parties-newuser">
+                                <input class="parties-userid" type="number" value="0" maxlength="10"><br><br>
+                                <div class="parties-newuser-register">Invite</div>
+                                <div class="parties-newuser-cancel">Cancel</div>
+                            </div>
+                            <div class="parties-acceptjob">
+                                <div class="parties-acceptjob-jobname"></div>
+                                <div class="parties-acceptjob-accept">Accept</div>
+                                <div class="parties-acceptjob-deny">Deny</div>
+                            </div>
+                            <div class="parties-elipse"><div class="lds-ellipsis">
+                                <div></div><div></div><div></div><div></div>
+                              </div></div>
+                            <div class="groups-find-job">FIND JOB</div>
+                            
+                            <i class="groups-toggle fas fa-toggle-on" id="toggle-parties"></i>
+                            <i class="groups-invite fas fa-user-plus"></i>
+                            <i class="groups-exit fas fa-door-open"></i>
+                            <div class="parties-find">FIND GROUP</div>
+                            <div class="parties-create">CREATE GROUP</div>
+                            <div class="parties-cancel">CANCEL</div>
+                            <div class="parties-ripple"><div class="lds-ripple"><div></div><div></div></div></div>
+                            <div class="parties-ripple-txt">Looking for Groups</div>
+                            <div class="timeline">
+                                <div class="container right">
+                                  <div class="content rob1">
+                                    <h6>Target Marked</h6>
+                                    <p class='robText'>I got you a job, follow the GPS.</p>
+                                  </div>
+                                </div>
+                                <div class="container right rob2">
+                                  <div class="content">
+                                    <h6>Approach Carefully</h6>
+                                    <p class='robText'>Be silent! Pick the lock and take what you can.</p>
+                                  </div>
+                                </div>
+                                <div class="container right rob3">
+                                  <div class="content">
+                                    <h6>House emptied</h6>
+                                    <p class='robText'>Get out of there, follow your GPS and sell what you don't want.</p>
+                                  </div>
+                                </div>
+                                <div class="container right rob4">
+                                  <div class="content">
+                                    <h6>Goods Delivered</h6>
+                                    <p class='robText'>A job well done.</p>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="general-app">
+                        <div class="phone-home-container"></div>
+                        <div class="general-header">
+                            <div id="general-health" class="general-header-btn"><i class="fas fa-sticky-note"></i><p>Notepad</p></div>
+                            <div id="general-job" class="general-header-btn"><i class="fas fa-address-card"></i><p>Job</p></div>
+                            <div id="general-other" class="general-header-btn"><i class="fas fa-book"></i><p>Other</p></div>
+                        </div>
+                        <div class="all-notes">
+                            <ul class="notepads">
+                            </ul>
+                            <div class="notes-buttons">
+                                <div class="new-note">New</div>
+                                <div class="delete-note">Delete</div>
+                            </div>
+                        </div>
+                        <input class="note-nombre" type="text" maxlength="25"><br><br>
+                        <textarea spellcheck="false" class="general-h" id="notepad" cols="30" rows="10"></textarea>
+                        <div class="notepad-buttons">
+                            <div class="save-notepad">Save</div>
+                            <div class="clear-notepad">Clear</div>
+                        </div>
+                        <div class="general-j">
+                            <div class="job-card general-card">
+                                <img src="./img/job-img.png" class="job-card-img">
+                                <p class="job-card-name"></p>
+                                <p class="job-card-job"></p>
+                                <p class="job-card-onduty"></p>
+                            </div>
+                            <div class="owner-card general-card">
+                                <img src="./img/owner-card.png" class="owner-card-img">
+                                <p class="owner-card-name"></p>
+                                <p class="owner-card-funds"></p>
+                            </div>
+                            <div class="moneywash-card general-card">
+                                <img src="./img/money-wash.png" class="moneywash-card-img">
+                                <p class="moneywash-card-name">Pizzeria</p>
+                                <p class="moneywash-card-funds"></p>
+                                <p class="moneywash-card-canwash"></p>
+                                <p class="moneywash-card-cooldown"></p>
+                            </div>
+                        </div>
+                        <div class="general-o">
+                            <div class="gym-card general-card">
+                                <img src="./img/lcrp-gym.png" class="gym-card-img">
+                                <p class="gym-card-name">Gym Subscription</p>
+                                <p class="gym-card-exp">Expires In:</p>
+                                <p class="gym-card-time"></p>
+                            </div>
+                            <p class="no-others">No info to display!</p>
+                        </div>
+                    </div>
+                    <!-- Skills app
+                    <div class="skills-app">
+                        <div class="phone-home-container">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="skills-inner">
+                            <div class="skills-header">
+                                <h1 class="skills-headertitle">Fitness Tracker</h1>
+                            </div>
+                        </div>
+                        <div class="skills-container">
+                            <div class="skills-box">
+                                <div class="skills-title">
+                                    <i class="fas fa-brain fa-3x skills-icon"></i>
+                                    <h3 class="skills-level" id="MentalState">Shooting</h3>
+                                    <h3 class="skills-name">Mental State</h3>
+                                </div>
+                            </div>
+                            <div class="skills-box">
+                                <div class="skills-title">
+                                    <i class="fas fa-heartbeat fa-3x skills-icon"></i>
+                                    <h3 class="skills-level" id="Stamina">Shooting</h3>
+                                    <h3 class="skills-name">Stamina</h3>
+                                </div>
+                            </div>
+                            <div class="skills-box">
+                                <div class="skills-title">
+                                    <i class="fas fa-people-carry fa-3x skills-icon"></i>
+                                    <h3 class="skills-level" id="Strength">Shooting</h3>
+                                    <h3 class="skills-name">Strength</h3>
+                                </div>
+                            </div>
+                            <div class="skills-box">
+                                <div class="skills-title">
+                                    <i class="fas fa-car fa-3x skills-icon"></i>
+                                    <h3 class="skills-level" id="Driving">Shooting</h3>
+                                    <h3 class="skills-name">Driving</h3>
+                                </div>
+                            </div>
+                            <div class="skills-box">
+                                <div class="skills-title">
+                                    <i class="fas fa-plane fa-3x skills-icon"></i>
+                                    <h3 class="skills-level" id="Flying">Shooting</h3>
+                                    <h3 class="skills-name">Flying</h3>
+                                </div>
+                            </div>
+                            <div class="skills-box">
+                                <div class="skills-title">
+                                    <i class="fas fa-user-ninja fa-3x skills-icon"></i>
+                                    <h3 class="skills-level" id="Stealth">Shooting</h3>
+                                    <h3 class="skills-name">Stealth</h3>
+                                </div>
+                            </div>
+                            <div class="skills-box">
+                                <div class="skills-title">
+                                    <i class="fas fa-bullseye fa-3x skills-icon"></i>
+                                    <h3 class="skills-level" id="Shooting">Shooting</h3>
+                                    <h3 class="skills-name">Shooting</h3>
+                                </div>
+                            </div>
+                            <div class="skills-box">
+                                <div class="skills-title">
+                                    <i class="fas fa-lungs fa-3x skills-icon"></i>
+                                    <h3 class="skills-level" id="LungCapacity">Shooting</h3>
+                                    <h3 class="skills-name">Lung Capacity</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <!-- anonChat-->
+                    <div class="anonChat-app">
+                        <!--<div class="anonChat-header">
+                            <p>Dark Chat</p>
+                        </div>-->
+                        <nav class="anonChat-navBar" onclick="openAnonMenu()">
+                            <ul class="anonChat-navBar-items">
+                                <li class="anonChat-navBar-item">
+                                    <div class="anonChat-navBar-item-box">
+                                        <i class="fas fa-users fa-2x anonChat-navBar-item-icon" id="anonChat-navBar-icon"></i>
+                                        <p class="anonChat-navBar-item-text" id="anonChat-navBar-Text">Groups</p>
+                                    </div>
+                                </li>
+                                <!--<li class="anonChat-navBar-item">
+                                    <div class="anonChat-navBar-item-box">
+                                        <i class="fas fa-comments fa-2x anonChat-navBar-item-icon"></i>
+                                        <p class="anonChat-navBar-item-text">Chat</p>
+                                    </div>
+                                </li>-->
+                            </ul>
+                        </nav>
+                        <div class="anonChat-body">
+                            <div class="anonChat-main" id="anonChatMain">
+                                <div class="anonChat-groups anontabcontent">
+                                    <div class="phone-home-container">
+                                    </div>
+                                    <div class="anonChat-groupsBox" onclick="openAnonChat('Drugs')">
+                                        <i class="fas fa-cannabis fa-2x anonChat-groups-icon"></i>
+                                        <p class="anonChat-groups-groupsBox-text">Drugs</p>
+                                    </div>
+                                    <div class="anonChat-groupsBox" onclick="openAnonChat('Weapons')">
+                                        <i class="fas fa-shopping-basket fa-2x anonChat-groups-icon"></i>
+                                        <p class="anonChat-groups-groupsBox-text">Weapons</p>
+                                    </div>
+                                    <div class="anonChat-groupsBox" onclick="openAnonChat('Robberies')">
+                                        <i class="far fa-money-bill-alt fa-2x anonChat-groups-icon"></i>
+                                        <p class="anonChat-groups-groupsBox-text">Robberies</p>
+                                    </div>
+                                    <div class="anonChat-groupsBox" onclick="openAnonChat('Kidnaps')">
+                                        <i class="fas fa-user-alt-slash fa-2x anonChat-groups-icon"></i>
+                                        <p class="anonChat-groups-groupsBox-text">Kidnaps</p>
+                                    </div>
+                                    <div class="anonChat-groupsBox" onclick="openAnonChat('Business')">
+                                        <i class="fas fa-briefcase fa-2x anonChat-groups-icon"></i>
+                                        <p class="anonChat-groups-groupsBox-text">Business</p>
+                                    </div>
+                                    <div class="anonChat-groupsBox" onclick="openAnonChat('Hitman')">
+                                        <i class="fas fa-skull-crossbones fa-2x anonChat-groups-icon"></i>
+                                        <p class="anonChat-groups-groupsBox-text">Hitman</p>
+                                    </div>
+                                </div>
+                                <div class="anonChat-text">
+                                    <p class="anonChat-text-text">More on request.</p>
+                                </div>
+                            </div>
+
+                            <div class="anonChat-chat anonChatTransition-hidden anonChatTransition-visuallyHidden" id="anonChatChat">
+                                <div class="anonChatTab">
+                                    <ul class="anonChat-chatList" id=anonChat-chatListID>
+                                    </ul>
+                                </div>
+                                <input id="anonChat-input2" class="anonChat-input" placeholder="Write your message here." autofocus>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Lawyers app 
+                    <div class="lawyers-app">
+                        <div class="lawyers-header">
+                            <div class="phone-home-container">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                            <p>Lawyers</p>
+                            <span>Available lawyers</span>
+                        </div>
+
+                        <ul class="lawyers-list">
+                            <!--<div class="flight" id ="1"><div class="flight-info-1"><p class="destinationid">CAIO PERICO #745</p><p class="hour">Departure: 124 min</p></div><div class="flight-info-2"><p class="nocu">7/20</p><p class="preco">200 $</p></div></div>
+                        </ul>
+                    </div>
+                    <div class="taxi-app">
+                        <div class="taxi-header">
+                            <div class="phone-home-container">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                            <p>Taxi</p>
+                            <span>Available taxis</span>
+                        </div>
+
+                        <ul class="taxi-list">
+                            <!--<div class="flight" id ="1"><div class="flight-info-1"><p class="destinationid">CAIO PERICO #745</p><p class="hour">Departure: 124 min</p></div><div class="flight-info-2"><p class="nocu">7/20</p><p class="preco">200 $</p></div></div>
+                        </ul>
+                    </div> -->
+
+                    <div class="advert-app">
+                        <div class="advert-home">
+                            <div class="advert-header">
+                                <div class="phone-home-container">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                                <span id="advert-header-text">Advertisement</span>
+                                <span id="advert-header-name"></span>
+                            </div>
+
+                            <div class="advert-list">
+                                <!-- <div class="advert">
+                                    <span class="advert-sender">@JayNandes | 0612345678</span>
+                                    <p>Dit is een test advert Dit is een test advert Dit is een test advert Dit is een test advert Dit is een test advert</p>
+                                </div> -->
+                            </div>
+
+                            <div class="test-slet">
+                                <i class="fas fa-plus test-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="new-advert">
+                            <div class="new-advert-header">
+                                <span id="new-advert-header-text">New Advertisement</span>
+                            </div>
+
+                            <textarea class="new-advert-textarea" spellcheck="false" required></textarea>
+
+
+                            <div class="new-advert-footer">
+                                <div class="new-advert-footer-item" id="new-advert-submit">
+                                    <i class="fas fa-check-circle new-advert-icon"></i>
+                                </div>
+                                <div class="new-advert-footer-item" id="new-advert-back">
+                                    <i class="fas fa-arrow-circle-left new-advert-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mail-app">
+                        <div class="mail-home">
+                            <div class="mail-header">
+                                <div class="phone-home-container">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                                <span id="mail-header-text">Inbox</span>
+                                <span id="mail-header-mail">detroitofficial@gmail.com</span>
+                                <span id="mail-header-lastsync">Last synchronization 12:31</span>
+                            </div>
+
+                            <div class="mail-list">
+                            </div>
+                        </div>
+
+                        <div class="opened-mail">
+                            <div class="opened-mail-header">
+                                <div class="mail-back"><i class="fas fa-chevron-left" id="mail-back"></i></div>
+                                <div class="mail-subject"><p>Topic</p></div>
+                                <div class="mail-date"><p>19 February 2020 &nbsp; 05:19</p></div>
+                                <div class="mail-spacing"></div>
+                                <div class="mail-content"><p>
+                                    This is a test mail and is therefore not fully displayed because that is what I am testing.
+                                </p></div>
+                            </div>
+                            <div class="opened-mail-footer">
+                                <div class="opened-mail-footer-item">
+                                    <i class="fas fa-check-circle" id="accept-mail"></i>
+                                </div>
+                                <div class="opened-mail-footer-item">
+                                    <i class="fas fa-trash-alt" id="remove-mail"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="twitter-app">
+
+                        <div class="twitter-home-tab">
+                            <!-- <div class="twitter-tweet" data-twthandler="@'+TwitterHandle.replace(" ", "_")+'">
+                                <div class="tweet-reply"><i class="fas fa-reply"></i></div>
+                                <div class="tweet-tweeter">'+Tweet.firstName+' '+Tweet.lastName+' &nbsp;<span>@'+TwitterHandle.replace(" ", "_")+' &middot; '+TimeAgo+'</span></div>
+                                <div class="tweet-message">@JAY</div>
+                                <div class="twt-img" style="top: 1vh;"><img src="'+PictureUrl+'" class="tweeter-image"></div>
+                            </div> -->
+                             <div class="twitter-no-tweets"><p>No Tweets have been posted yet</p></div>
+                        </div>
+
+                        <div class="twitter-mentions-tab">
+                            <!-- <div class="twitter-mentioned-tweet">
+                                <div class="tweet-tweeter">Test &nbsp;<span>@Test &middot; 2 m</span></div>
+                                <div class="tweet-message">Dit is test tweet yeey. :) ggggggggggggggggggggggggggg gggggggggggggggggg</div>
+                                <div class="twt-img" style="top: 1vh;"><img src="'+PictureUrl+'" class="tweeter-image"></div>
+                            </div> -->
+                            <div class="twitter-no-tweets"><p>You are not yet mentioned</p></div>
+                        </div>
+
+                        <div class="twitter-hashtags-tab">
+                            <div class="twitter-hashtag-tweets">
+                                <div class="twitter-tweet">
+                                    <!-- <div class="tweet-tweeter">Test &nbsp;<span>@Test &middot; 2 m</span></div>
+                                    <div class="tweet-message">Dit is test tweet yeey. :) ggggggggggggggggggggggggggg gggggggggggggggggg</div>
+                                    <div class="twt-img" style="top: 1vh;"><img src="'+PictureUrl+'" class="tweeter-image"></div> -->
+                                </div>
+                            </div>
+                            <div class="twitter-hashtags">
+                                <!-- <div class="twitter-hashtag">
+                                    <div class="twitter-hashtag-status">Not trending</div>
+                                    <div class="twitter-hashtag-tag">#Test</div>
+                                    <div class="twitter-hashtag-messages">5 Tweets</div>
+                                </div> -->
+                                <div class="twitter-no-tweets"><p>There are no hashtags</p></div>
+                            </div>
+                        </div>
+
+                        <div class="twitter-new-tweet">
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+
+                        <div class="twitter-new-tweet-tab">
+                            <div class="twitter-new-tweet-header"><p>New Tweet</p></div>
+
+                            <textarea id="tweet-new-message" placeholder="What's happening?" cols="30" rows="10" spellcheck="false" required></textarea>
+
+                            <div class="twitter-new-tweet-buttons">
+                                <div class="twitter-new-tweet-button" id="send-tweet"><p>Send</p></div>
+                                <div class="twitter-new-tweet-button" id="cancel-tweet"><p>Cancel</p></div>
+                            </div>
+                        </div>
+
+                        <div class="twitter-header">
+                            <div id="twitter-home" data-twittertab="twitter-home" class="twitter-header-tab selected-twitter-header-tab"><i class="fas fa-home"></i></div>
+                            <div id="twitter-mentions" data-twittertab="twitter-mentions" class="twitter-header-tab"><i class="fas fa-at"></i></div>
+                            <div id="twitter-hashtags" data-twittertab="twitter-hashtags" class="twitter-header-tab"><i class="fas fa-hashtag"></i></div>
+                            <div id="twitter-leave" data-twittertab="twitter-hashtags" class="twitter-header-tab phone-home-container" style="margin-top: 1.8% !important; border-radius: 0% !important;"><i class="fas fa-door-open"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="bank-app">
+                        <div class="bank-app-loading">
+                            <span id="qbank-text">Bank</span>
+                        </div>
+                        <div class="bank-app-loaded">
+                            <div class="bank-app-header">
+                                <div data-headertype="accounts" class="bank-app-header-button bank-app-header-button-selected"> <i class="fas fa-align-left"></i> <p>Overview</p> </div>
+                                <div data-headertype="invoices" class="bank-app-header-button"> <i class="fas fa-file-invoice"></i> <p>Invoices</p> </div>
+                                <div data-headertype="invoices" class="bank-app-header-button  phone-home-container" style="margin-top: 3.6% !important; border-radius: 0% !important;"> <i class="fas fa-door-open"></i> <p>Sign Õut</p> </div>
+                            </div>
+
+                            <div class="bank-app-accounts">
+                                <div class="bank-app-account">
+                                    <div class="bank-app-account-title">Bank account</div>
+                                    <!-- <div class="bank-app-account-number" id="iban-account">NL01QBBA012341234123</div> -->
+                                    <input type="text" class="bank-app-account-number" id="iban-account" readonly spellcheck="false">
+                                    <div class="bank-app-account-balance">&dollar; 5000,00</div>
+                                </div>
+
+
+                            </div>
+
+                            <!--    <div class="bank-app-account-actions">
+                                    <i id="transfer-money" class="fas fa-exchange-alt bank-app-account-action-transfer"></i>
+                                </div>
+                            </div>
+
+                             <div class="bank-app-transfer">
+                                <div class="bank-app-transfer-header">Transfer money</div>
+
+                                <i class="bank-transfer-iban-icon fas fa-credit-card"></i>
+                                <input type="text" id="bank-transfer-iban" class="bank-transfer-input" required spellcheck="false">
+                                <i class="bank-transfer-mycontacts-icon fas fa-address-book"></i>
+
+                                <i class="bank-transfer-amount-icon fas fa-dollar-sign"></i>
+                                <input type="number" id="bank-transfer-amount" class="bank-transfer-input" required spellcheck="false">
+
+                                <div class="bank-app-transfer-buttons">
+                                    <div class="bank-app-transfer-button" id="accept-transfer">Transfer</div>
+                                    <div class="bank-app-transfer-button" id="cancel-transfer">Cancel</div>
+                                </div>
+                            </div> -->
+
+                            <div class="bank-app-invoices">
+                                <div class="bank-app-invoices-list">
+                                    <!-- <div class="bank-app-invoice"> <div class="bank-app-invoice-title">Betaalverzoek <span style="font-size: 1vh; color: gray;">(Afzender: 0612345678)</span></div> <div class="bank-app-invoice-amount">&dollar; 5000,-</div> <div class="bank-app-invoice-buttons"> <i class="fas fa-check-circle pay-invoice"></i> <i class="fas fa-times-circle decline-invoice"></i> </div> </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bank-app-my-contacts">
+                            <div class="bank-app-my-contacts-header">My Contacts</div>
+                            <div class="bank-app-my-contacts-list-header">
+                                <input type="text" id="bank-app-my-contact-search" placeholder="Contact Name" spellcheck="false">
+                            </div>
+                            <div class="bank-app-my-contacts-list">
+                                <!-- <div class="bank-app-my-contact"> <div class="bank-app-my-contact-firstletter">P</div> <div class="bank-app-my-contact-name">Pieter Post</div> </div> -->
+                            </div>
+                            <div class="bank-app-my-contacts-list-back">Back</div>
+                        </div>
+                    </div>
+
+                    <div class="whatsapp-app">
+                        <div class="whatsapp-header">
+                            <div class="whatsapp-header-top"></div>
+                            <div class="whatsapp-header-footer">
+                                <p>Messages</p>
+                                <div class="phone-home-container" id="whatsapp-hm">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                                <i id="whatsapp-search-chats" class="fas fa-search"></i>
+                                <input type="text" id="whatsapp-search-input" placeholder="Contact name" spellcheck="false">
+                            </div>
+                        </div>
+                        <div class="whatsapp-chats">
+                            <!-- <div class="whatsapp-chat">
+                                <div class="whatsapp-chat-picture"></div>
+                                <div class="whatsapp-chat-name"><p>Testt</p></div>
+                                <div class="whatsapp-chat-lastmessage"><p>This is a hardcoded test message! 1111111111111111111111111111111111111</p></div>
+                                <div class="whatsapp-chat-lastmessagetime"><p>07:53</p></div>
+                            </div> -->
+                        </div>
+                        <div class="whatsapp-openedchat">
+                            <div class="whatsapp-header-openedchat">
+                                <div class="whatsapp-header-top-openedchat"></div>
+                                <div class="whatsapp-header-footer-openedchat">
+                                    <div class="whatsapp-openedchat-picture"></div>
+                                    <div class="whatsapp-openedchat-name"><p></p></div>
+                                    <i id="whatsapp-openedchat-back" class="fas fa-arrow-left"></i>
+                                </div>
+                            </div>
+                            <div class="whatsapp-openedchat-messages">
+
+                            </div>
+                            <div class="whatsapp-openedchat-input">
+                                <div class="whatsapp-extra-buttons">
+                                    <div class="whatsapp-extra-button" id="send-location"><i class="fas fa-map-marker-alt"></i></div>
+                                    <!-- <div class="whatsapp-extra-button" id="send-image"><i class="fas fa-map-marker-alt"></i></div> -->
+                                    <!-- <div class="whatsapp-extra-button" id="send-location"><i class="fas fa-money-bill"></i></div> -->
+                                </div>
+                                <input type="text" id="whatsapp-openedchat-message" placeholder="" spellcheck="false">
+                                <i class="fas fa-paper-plane" id="whatsapp-openedchat-send"></i>
+                                <i class="fas fa-ellipsis-v" id="whatsapp-openedchat-message-extras"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-currentcall-container">
+                    <div class="phone-currentcall-icon"><i class="fas fa-phone"></i></div>
+                    <div class="phone-currentcall-title">Outgoing call</div>
+                    <div class="phone-currentcall-contact">with 0612345678</div>
+                </div>
+            </div>
+        </div>
+        <div class="screen-notifications-container" style="display: none;">
+            <div class="screen-notification-icon"><i class="fab fa-twitter"></i></div>
+            <div class="screen-notification-title"><p>New Tweet!</p></div>
+            <div class="screen-notification-content"><p>Test notification</p></div>
+        </div>
+
+        <div class="call-notifications" style="display: none;">
+            <div class="call-notifications-icon"><i class="fas fa-phone"></i></div>
+            <div class="call-notifications-title"><p>Incoming Call</p></div>
+            <div class="call-notifications-content"><p>You have an Incoming Call from</p></div>
+        </div>
+
+        <!-- <div class="emergency-button">
+            <div class="emergency-button-header">
+                <img src="./img/politie-2.png" class="police-logo-2">
+            </div>
+            <div class="emergency-button-footer">
+                <img src="./img/politie-3.png" class="police-logo-3">
+            </div>
+        </div> -->
+
+        <!-- JavaScript File's -->
+        <script src="./js/radio.js"></script>
+        <script src="./js/config.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/settings.js"></script>
+        <script src="./js/phone.js"></script>
+        <script src="./js/twitter.js"></script>
+        <script src="./js/bank.js"></script>
+        <script src="./js/whatsapp.js"></script>
+        <script src="./js/garage.js"></script>
+        <script src="./js/mail.js"></script>
+        <script src="./js/invest.js"></script>
+        <!-- <script src="./js/meos.js"></script> -->
+        <!-- <script src="./js/crypto.js"></script> -->
+        <script src="./js/racing.js"></script>
+        <!-- <script src="./js/houses.js"></script> -->
+        <!--<script src="./js/skills.js"></script>-->
+        <script src="./js/general.js"></script>
+        <script src="./js/parties.js"></script>
+        <script src="./js/services.js"></script>
+        <script src="./js/anonChat.js"></script>
+        <script src="./js/yt.js"></script>~
+        <script src="./js/airlines.js"></script>
+        <script src="./js/valet.js"></script>
+        <script src="./js/lawyers.js"></script>
+        <script src="./js/taxi.js"></script>
+        <script src="./js/realestate.js"></script>
+    </body>
+</html>

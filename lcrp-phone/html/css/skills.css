@@ -1,0 +1,83 @@
+.skills-app{
+    display: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(31, 31, 31);
+    overflow: hidden;
+}
+
+.skills-inner{
+    position: absolute;
+    height: 9vh;
+    width: 100%;
+    padding-top: 2rem;
+    background-color: #5c2695;
+    border: 2px solid #4a1d7a;
+}
+
+.skills-app .phone-home-container i:hover {
+    color: rgb(65, 65, 65);
+}
+
+.skills-app .phone-home-container{
+    position: absolute;
+    top: 5.3vh;
+    right: 2vh;
+    z-index: 150;
+}
+
+.skills-app .phone-home-container i {
+    color: white;
+    font-size: 1.1em;
+}
+
+.skills-header{
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+
+.skills-headertitle{
+    font-size: 25px;
+    font-family: 'Samsung Sans Medium';
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 10rem;
+    gap:1rem;
+}
+
+.skills-box{
+    color:#ddd;
+    cursor: pointer;
+}
+
+.skills-title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin:1rem;
+    padding: 1rem;
+}
+
+.skills-level{
+    font-size: 13px;
+    margin:0;
+    margin-top: 1rem;
+    color: rgb(212, 212, 212);
+}
+
+.skills-name{
+    font-size: 15px;
+    margin:0;
+    color: rgb(212, 212, 212);
+}
+
+.skills-icon{
+    color: #e1ccf8;
+}

@@ -1,0 +1,360 @@
+@font-face {
+  font-family: Kum;
+  src: url('../fonts/KumbhSans-Bold.ttf');
+}
+
+:root {
+  --neonpink:#c137f5;
+  --neonblue:#1fbfb8;
+  --pinkred:#fd2e78;
+
+}
+
+.background {
+  background: rgb(28,40,83);
+  background: linear-gradient(90deg, rgba(28,40,83,1) 0%, rgba(18,38,78,1) 25%, rgba(21,46,88,1) 50%, rgba(18,38,78,1) 75%, rgba(28,37,77,1) 100%);
+}
+
+.test-left {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.test-center {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.test-right {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.buttons-center {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(122,32,72);
+  background: linear-gradient(90deg, rgba(122,32,72,1) 0%, rgba(185,0,39,1) 100%);
+  box-shadow: 0 0 10px 2px var(--pinkred);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: rgb(25,120,165);
+  background: linear-gradient(90deg, rgba(25,120,165,1) 0%, rgba(5,113,108,1) 100%);
+  box-shadow: 0 0 10px 2px var(--neonblue);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 10px 2px var(--neonpink);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Reset buttons*/
+div .button-left{
+  width:255px;
+  height:55px;
+  font-size:16px;
+  margin:auto;
+  display:flex;
+  float:left;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  cursor:pointer;
+  border-radius: 5px;
+  margin-left: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-right: 5px;
+}
+
+.button-left{
+  font-family: Kum;
+  color:white;
+  border:1px solid #ccc;
+  transition:.2s all;
+  overflow:hidden;
+  font-weight:bold;
+  background: rgb(25,120,165);
+  background: linear-gradient(90deg, rgba(25,120,165,1) 0%, rgba(5,113,108,1) 100%);
+  box-shadow: 0 0 10px 2px var(--neonblue);
+  text-shadow: 1px 1px 5px black;
+}
+
+.button-left:hover{
+  color:white;
+  background: rgb(122,32,72);
+  background: linear-gradient(90deg, rgba(122,32,72,1) 0%, rgba(185,0,39,1) 100%);
+  box-shadow: 0 0 10px 2px var(--pinkred);
+  text-shadow: 1px 1px 5px black;
+  transition:.2s;
+}
+
+.button-left:after {
+  content: "";
+  background: rgba(131,18,42,1);
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: 0px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button-left:active:after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition:0s;
+}
+
+.button-left:focus {
+  box-shadow: 0 0 10px 2px var(--neonpink);
+}
+
+/* Button right*/
+div .button-right{
+  width:255px;
+  height:55px;
+  font-size:16px;
+  margin:auto;
+  display:flex;
+  float:right;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  cursor:pointer;
+  border-radius: 5px;
+  margin-right: 16px;
+  margin-top: 16px;
+  margin-bottom:16px;
+  margin-left: 5px;
+  transition:.2s;
+}
+
+.button-right{
+  font-family: Kum;
+  color:white;
+  border:1px solid #ccc;
+  transition:.2s all;
+  overflow:hidden;
+  font-weight:bold;
+  background: rgb(25,120,165);
+  background: linear-gradient(90deg, rgba(25,120,165,1) 0%, rgba(5,113,108,1) 100%);
+  box-shadow: 0 0 10px 2px var(--neonblue);
+  text-shadow: 1px 1px 5px black;
+}
+
+.button-right:hover{
+  color:white;
+  background: rgb(122,32,72);
+  background: linear-gradient(90deg, rgba(122,32,72,1) 0%, rgba(185,0,39,1) 100%);
+  box-shadow: 0 0 10px 2px var(--pinkred);
+  text-shadow: 1px 1px 5px black;
+  transition:.2s;
+}
+
+.button-right:after {
+  content: "";
+  background: rgba(131,18,42,1);
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: 0px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button-right:active:after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition:0s;
+}
+
+.button-right:focus {
+  box-shadow: 0 0 10px 2px var(--neonpink);
+}
+
+.progress {
+	-webkit-transition: 0.35s stroke-dashoffset;
+	-o-transition: 0.35s stroke-dashoffset;
+	transition: 0.35s stroke-dashoffset;
+	-webkit-transform: rotate(140deg);
+	-ms-transform: rotate(140deg);
+	transform: rotate(140deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.backgroundCircle, .outer {
+	-webkit-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.dials {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: 45% 45%;
+}
+
+.dials span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+}
+
+.dials svg {
+    opacity: 1 !important; 
+}
+
+.dials span {
+  opacity: 0;
+}
+
+.dials span:after {
+  position: relative;
+  content: '%';
+  font-size: 7px; 
+}
+
+.dials g {
+  -webkit-transform: translate(16px, 13px);
+  -ms-transform: translate(16px, 13px);
+  transform: translate(16px, 13px); 
+}
+
+.counter {
+	height: 100%;
+	width: 100%; 
+}
+
+.counter .counter2 {
+  position: relative;
+  height: 200%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .counter .counter2 div {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px; }
+    .counter .counter2 div svg {
+      opacity: .2; }
+  .counter .counter2 .active svg {
+    opacity: .8; 
+  }
+
+  .counter .counter2 .speedometer {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	-webkit-clip-path: polygon(100% 45%, 80% 45%, 60% 100%, 0% 100%, 0% 0%, 100% 0%);
+	clip-path: polygon(100% 45%, 80% 45%, 60% 100%, 0% 100%, 0% 0%, 100% 0%); }
+	.counter .counter2 .speedometer svg {
+	  opacity: 1;
+	  position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  -webkit-transform: scale(2) translate(-25%, -25%);
+	  -ms-transform: scale(2) translate(-25%, -25%);
+	  transform: scale(2) translate(-25%, -25%); 
+  }
+
+	.counter .counter2 .speedometer .outer {
+	  opacity: .3;
+	  -webkit-transform: rotate(180deg) scale(1.2);
+	  -ms-transform: rotate(180deg) scale(1.2);
+	  transform: rotate(180deg) scale(1.2); 
+  }
+
+	.counter .counter2 .speedometer .text {
+	  width: 100%;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  text-shadow: 1px 1px 3px rgba(0,0,0,0.75);
+	  -webkit-transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  transform: translate(-50%, -50%);
+	  margin: 0; }
+	  .counter .counter2 .speedometer .text .speed {
+		color: white;
+		font-size: 27px;
+		display: block; 
+		text-shadow: 1px 1px 3px black; }
+	  .counter .counter2 .speedometer .text .mph {
+		color: rgb(255, 255, 255);
+		font-size: 11px;
+		display: block;
+		text-transform: uppercase; 
+		text-shadow: 1px 1px 3px black; 
+}
+
+    

@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.vehicle-shop {
+    position: relative;
+    width: 1500px;
+    height: 950px;
+    background: url("./img/site-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 1.0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
+}
+
+.vehicle-shop-header {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    background-color: rgb(31, 31, 31);
+    border-bottom: 3px solid #d14848;
+}
+
+#vehicle-shop-header-logo {
+    position: absolute;
+    right: -50px;
+    top: -50px;
+}
+
+.vehicle-category {
+    position: relative;
+    margin: auto 0;
+    top: 30%;
+    right: 2%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 32px;
+    float: right;
+    margin-right: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.selected {
+    border-bottom: 3px solid white;
+}
+
+.vehicle-category:hover {
+    color: rgb(170, 170, 170);
+}
+
+
+.vehicle-category > p {
+    font-family: 'Staatliches', cursive;
+    text-transform: uppercase;
+}
+
+.vehicles {
+    position: relative;
+    width: 95%;
+    height: 76%;
+    margin: 0 auto;
+    top: 18%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.vehicle {
+    position: relative;
+    width: 30%;
+    height: 37%;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 80px;
+    background-color: #9c4242e5;
+    box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.1);
+}
+
+.car-image {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.vehicle-buy-btn {
+    position: absolute;
+    width: 100%; 
+    height: 40px;
+    top: 95%;
+    background-color: rgba(0, 66, 153, 0.733);
+    color: white;
+    line-height: 19px;
+    font-size: 14px;
+}
+
+.vehicle-buy-btn:hover {
+    background-color: rgba(20, 81, 161, 0.733);
+}
+
+.vehicle-buy-btn > p {
+    position: absolute;
+    left: 2%;
+    top: 25%;
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+}
+
+#vehicle-name {
+    position: absolute;
+    bottom: 96%;
+    font-family: 'Staatliches', cursive;
+    font-size: 30px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#vehicle-price {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    bottom: -5%;
+    right: 2%;
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 3px;
+	background-color: #b12424e5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #b12424e5;
+}
+
+.vehicle-shop-home {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 25%;
+}
+
+#home-title {
+    position: absolute;
+    color: white;
+    margin-top: 50px;
+}
+
+#home-text {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: 50px;
+    margin-top: 90px;
+}
+
+#home-page-car {
+    position: absolute;
+    width: 300px;
+    right: 30px;
+    top: 70px;
+}
+
+.buy-vehicle-map {
+    display: none;
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    background-image: url("./img/gta-map.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 21%;
+    z-index: 200;
+}
+
+.map-header {
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    background-color: rgba(0, 66, 153, 0.959);
+	border-bottom: 1px solid #b12424e5;
+}
+
+.map-header > p {
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    line-height: 25px;
+}
+
+.map-pin > img {
+    width: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.map-pin:hover > img{
+    width: 22px;
+}
+
+#garagea {
+    position: absolute;
+    top: 125px;
+    left: 327px;
+}
+
+#garageb {
+    position: absolute;
+    top: 170px;
+    left: 260px;
+}
+
+#garagec {
+    position: absolute;
+    top: 175px;
+    left: 170px;
+}
+
+#garaged {
+    position: absolute;
+    top: 95px;
+    left: 297px;
+}
+
+#garagee {
+    position: absolute;
+    top: 180px;
+    left: 235px;
+}
+
+/* Tool Tip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 5px 15px;
+    position: absolute;
+    left: 125%;
+    bottom: 10%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 101;  
+    font-size: 11px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(0, 0, 0, 0.75) transparent transparent;
+    z-index: 101;  
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    z-index: 101;  
+}
+
+#close-map {
+    position: absolute;
+    right: 8px;
+    bottom: 4px;
+    color: rgb(255, 255, 255);
+    background: #9c4242e5;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: absolute;
+  top: 45%;
+  right: 45%;
+  text-indent: -9999em;
+  border-top: 1.1em solid #9c4242e5;
+  border-right: 1.1em solid #9c4242e5;
+  border-bottom: 1.1em solid #9c4242e5;
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

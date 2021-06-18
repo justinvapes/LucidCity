@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+  <title>CSS Roulette Wheel</title>
+  <link href="roulette.css" rel="stylesheet">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+
+	<script>
+    var number;
+    var coins = 0;
+    var bet = 10;
+		$(function() {
+			/* open the UI for user */
+			window.addEventListener('message', function(event) {
+				if (event.data.type == "show_roulette"){
+					$('.plate').css('display', 'block')
+          document.body.style.background = 'url("https://i.imgur.com/AhCGfGT.png") no-repeat fixed center';
+					setTimeout(function(){
+						number = event.data.hwButton
+						roulette_start();
+          }, 100);
+        } else if (event.data.type == "reset_bet") {
+          bet = 10;
+        } else if (event.data.type == "show_table") {
+          coins = event.data.zetony;
+          $('#ownedCoins').text(coins);
+          $('#ownedBet').text(bet);
+          $('.controls').css('display','flex')
+          $('.controls').show()
+          $('.bets').css('display','flex')
+          $('.bets').show()
+          $('.wartosci').show()
+          $('.betPosition').show()
+          document.body.style.background = 'url("https://i.imgur.com/AhCGfGT.png") no-repeat fixed center';
+        } else if (event.data.type == "hide_table") {
+          $('.controls').hide()
+          $('.bets').hide()
+          $('.wartosci').hide()
+          $('.betPosition').hide()
+          document.body.style.background = 'none';
+				} else if (event.data.type == "hide_roulette"){
+          $('.plate').css('display', 'none')
+          $('.controls').hide()
+          $('.bets').hide()
+          $('.wartosci').hide()
+          $('.betPosition').hide()
+          document.body.style.background = 'none';
+					setTimeout(function(){
+						roulette_reset();
+					}, 100);
+				} 
+			});
+    });
+    
+    $(document).ready(function() {
+
+      $('body').keyup(function(e){
+        switch (e.keyCode) {
+          case 27:
+            $.post("http://lcrp-activities/exit", JSON.stringify({
+              coinAmount: 0
+            }));
+            $('.plate').css('display', 'none')
+            $('.controls').hide()
+            $('.bets').hide()
+            $('.wartosci').hide()
+            $('.betPosition').hide()
+            bet = 10;
+            document.body.style.background = 'none';
+            setTimeout(function(){
+              roulette_reset();
+            }, 100);
+          ; // ESC
+            break;
+        }
+      });
+
+      $('#betUp10').on('click', function(){
+        pressBetUp(10);
+      })
+      $('#betUp25').on('click', function(){
+        pressBetUp(25);
+      })
+      $('#betUp100').on('click', function(){
+        pressBetUp(100);
+      })
+      $('#betUp250').on('click', function(){
+        pressBetUp(250);
+      })
+      $('#betUp1000').on('click', function(){
+        pressBetUp(1000);
+      })
+      $('#betAllIn').on('click', function(){
+        pressBetUp(coins);
+      })
+      $('#resetuj').on('click', function(){
+        pressBetUp(0);
+      })
+      $('#Betczerwone').on('click', function(){
+        if(bet <= coins){
+          $.post("http://lcrp-activities/roll", JSON.stringify({
+            kolor: 'red',
+            kwota: bet
+          }));
+          $('#ownedCoins').text(coins - bet);
+        }
+      })
+      $('#Betczarne').on('click', function(){
+        if(bet <= coins){
+          $.post("http://lcrp-activities/roll", JSON.stringify({
+            kolor: 'black',
+            kwota: bet
+          }));
+          $('#ownedCoins').text(coins - bet);
+        }
+      })
+      $('#Betzielony').on('click', function(){
+        if(bet <= coins){
+          $.post("http://lcrp-activities/roll", JSON.stringify({
+            kolor: 'green',
+            kwota: bet
+          }));
+          $('#ownedCoins').text(coins - bet);
+        }
+      })
+    });
+
+    function pressBetUp(amount) {
+      if(amount != 0 && amount != coins && amount + bet <= coins) {
+        bet = amount + bet;
+        $('#ownedBet').text(bet);
+        $.post("http://lcrp-activities/betup", JSON.stringify({
+          }));
+      } else if (amount == coins) {
+        bet = coins;
+        $('#ownedBet').text(bet);
+        $.post("http://lcrp-activities/betup", JSON.stringify({
+          }));
+      } else if (amount == 0) {
+        bet = 0;
+        $('#ownedBet').text(bet);
+        $.post("http://lcrp-activities/betup", JSON.stringify({}));
+      }
+    }
+  </script>
+
+
+</head>
+
+<body style="background-size: contain;">
+
+    <div class="main">
+        <div class="wartosci">
+          <span class="ownedCoins">Balance: <span id="ownedCoins">0</span></span>
+        </div>
+        <div class="betPosition">
+          <span class="ownedBet">Bet: <span id="ownedBet">0</span></span>
+        </div>
+        <div class="bets">
+            <button class="buttonBet" id="resetuj">RESET</button>
+            <button class="buttonBet" id="betUp10">+10</button>
+            <button class="buttonBet" id="betUp25">+25</button>
+            <button class="buttonBet" id="betUp100">+100</button>
+            <button class="buttonBet" id="betUp250">+250</button>
+            <button class="buttonBet" id="betUp1000">+1000</button>
+            <button class="buttonBet" id="betAllIn">ALL&nbsp;IN</button>
+        </div>
+      <div class="controls">
+        <button class="buttonBetRed" id="Betczerwone">RED&nbsp;x1.5</button>
+        <button class="buttonBetBlack" id="Betczarne">BLACK&nbsp;x1.5</button>
+        <button class="buttonBetGreen" id="Betzielony">GREEN&nbsp;x17.5</button>
+      </div>
+      <div class="plate" id="plate" style="display: none;">
+      <ul class="inner">
+        <li class="number"><label><input type="radio" name="pit" value="32" /><span class="pit">32</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="15" /><span class="pit">15</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="19" /><span class="pit">19</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="4" /><span class="pit">4</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="21" /><span class="pit">21</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="2" /><span class="pit">2</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="25" /><span class="pit">25</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="17" /><span class="pit">17</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="34" /><span class="pit">34</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="6" /><span class="pit">6</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="27" /><span class="pit">27</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="13" /><span class="pit">13</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="36" /><span class="pit">36</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="11" /><span class="pit">11</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="30" /><span class="pit">30</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="8" /><span class="pit">8</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="23" /><span class="pit">23</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="10" /><span class="pit">10</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="5" /><span class="pit">5</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="24" /><span class="pit">24</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="16" /><span class="pit">16</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="33" /><span class="pit">33</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="1" /><span class="pit">1</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="20" /><span class="pit">20</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="14" /><span class="pit">14</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="31" /><span class="pit">31</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="9" /><span class="pit">9</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="22" /><span class="pit">22</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="18" /><span class="pit">18</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="29" /><span class="pit">29</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="7" /><span class="pit">7</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="28" /><span class="pit">28</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="12" /><span class="pit">12</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="35" /><span class="pit">35</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="3" /><span class="pit">3</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="26" /><span class="pit">26</span></label></li>
+        <li class="number"><label><input type="radio" name="pit" value="0" /><span class="pit">0</span></label></li>
+      </ul>
+      <div class="data">
+        <div class="data-inner">
+          <div class="mask"></div>
+          <div class="result">
+            <div class="result-number">00</div>
+            <div class="result-color">red</div>        
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script>
+
+    <script type="text/javascript">
+	 var $inner = $('.inner'),
+		 $spin = $('#spin'),
+		 $reset = $('#reset'),
+		 $data = $('.data'),
+		 $mask = $('.mask'),
+		 maskDefault = '',
+		 timer = 9000;
+
+	var red = [32,19,21,25,34,27,36,30,23,5,16,1,14,9,18,7,12,3];
+
+	$reset.hide();
+
+	$mask.text(maskDefault);
+	function roulette_start(){
+	  
+	  // get a random number between 0 and 36 and apply it to the nth-child selector
+	// var  randomNumber = Math.floor(Math.random() * 36),
+	 var  randomNumber = number;
+	 //var  randomNumber = event.data.number;
+		  color = null;
+		  color_name = null;
+		  $inner.attr('data-spinto', randomNumber).find('li:nth-child('+ randomNumber +') input').prop('checked','checked');
+		  // prevent repeated clicks on the spin button by hiding it
+		   $(this).hide();
+		  // disable the reset button until the ball has stopped spinning
+		   $reset.addClass('disabled').prop('disabled','disabled').show();
+	  
+		  $('.placeholder').remove();
+	  
+	  
+	  setTimeout(function() {
+		  $mask.text('');
+		  }, timer/2);
+	  
+	  setTimeout(function() {
+		  $mask.text(maskDefault);
+		  }, timer+500);
+	  
+	 
+	  
+	  // remove the disabled attribute when the ball has stopped
+	  setTimeout(function() {
+		$reset.removeClass('disabled').prop('disabled','');
+		
+		if($.inArray(randomNumber, red) !== -1){
+			color = 'red';
+			color_name = 'Red';
+		}
+		else{
+			color = 'black';
+			color_name = 'Black';
+		};
+		if(randomNumber == 0){
+			color = 'green';
+			color_name = 'Green';
+		};
+		
+		$('.result-number').text(randomNumber);
+		$('.result-color').text(color_name);
+		$('.result').css({'background-color': ''+color+''});
+		$data.addClass('reveal');
+		$inner.addClass('rest');
+	   
+		
+		}, timer);
+	  
+	};
+
+
+	function roulette_reset(){
+	  // remove the spinto data attr so the ball 'resets'
+	  $inner.attr('data-spinto','').removeClass('rest');
+	  $(this).hide();
+	  $spin.show();
+	  $data.removeClass('reveal');
+	};
+
+	// so you can swipe it too
+	var myElement = document.getElementById('plate');
+	var mc = new Hammer(myElement);
+	mc.on("swipe", function(ev) {
+	  if(!$reset.hasClass('disabled')){
+		if($spin.is(':visible')){
+		  $spin.click();  
+		} else {
+		  $reset.click();
+		}
+	  }  
+	});
+	</script>
+
+
+
+
+</body>
+
+</html>

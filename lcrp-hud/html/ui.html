@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/square.css">
+    <style> #drag-browser, #cinematic {display: none;}
+     @keyframes pulse {
+      0% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+      50% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      }  
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">        <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="./js/jquery.wheelcolorpicker.js"></script>
+    <link type="text/css" rel="stylesheet" href="./css/wheelcolorpicker.dark.css" />
+  </head>
+  <body>
+    <div class="money-container">
+        <div class="money-content">
+            <div class="money-cash">
+                <p class="munnie">&dollar;&nbsp;<span id="cash">0</span></p>
+            </div>
+            <div class="money-bank">
+                <p class="munnie">&dollar;&nbsp;<span id="bank">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main"id="main">
+
+      <svg class="circle" id="health" width="60" height="60">
+        <circle class="progressplayer health" id="health-circle" stroke="#9DE112" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+        <image class="a" href="img/health.png" height="17" width="17" x="16" y="27"></image>
+      </svg>
+
+      <svg class="circle" id="armor" width="60" height="60">
+        <circle class="progressplayer armor" id="armor-circle" stroke="#3585DA" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+        <image href="img/armor.png" height="17" width="17" x="16" y="27"></image>
+      </svg>
+
+      
+        <svg class="circle" id="hunger" width="60" height="60">
+        <circle class="progressplayer hunger" id="hunger-circle" stroke="#ffa200" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+        <image class="a" href="img/hunger.png" height="17" width="17" x="16" y="27"></image>
+      </svg>
+
+      <svg class="circle" id="thirst" width="60" height="60">
+        <circle class="progressplayer thirst" id="thirst-circle" stroke="#00b6e3" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+        <image href="img/thirst.png" height="17" width="17" x="16" y="27"></image>
+      </svg>
+    
+      <svg class="circle" id="stress" width="60" height="60">
+        <circle class="progressplayer stress" id="stress-circle" stroke="#A118DB" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+        <image href="img/stress.png" height="17" width="17" x="16" y="27"></image>
+      </svg>
+    </div>
+
+    <div class="waypoint"><span id="waypointDistance"></span></div>
+    <div class="ui-car-container" style="display: none;">
+          <div class="counter" id="idCounter">
+            <div class="counter2" id="idCounter2">
+                <div class="speedometer">
+                    <svg class="circle" width="50" height="50">
+                        <circle class="outer" stroke="#000000" stroke-width="0.9" style="stroke-opacity: 0.5;" fill="transparent" r="18" cx="25" cy="25" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+                        <circle class="backgroundCircle" stroke="#000000" stroke-width="4" style="stroke-opacity: 0.4;" fill="transparent" r="18" cx="25" cy="25" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+                        <circle class="progress progress-speed" stroke="url(#gradient)" stroke-width="2.5" style="stroke-opacity: 1;" fill="transparent" r="18" cx="25" cy="25" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+                        <defs>
+                            <linearGradient id="gradient">
+                                <stop offset="30%" stop-color="#ffffff" />
+                                <stop offset="100%" stop-color="#ffffff" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="text">
+                        <span class="speed"></span>
+                        <div class="mph">mp/h</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gauges">
+            <div class="dials" style="background-image: url(img/fuel.png);">
+                <svg class="circle" width="40" height="40">
+                    <circle class="backgroundCircle" stroke="#000000" stroke-width="3.5" style="stroke-opacity: 0.5;" fill="transparent" r="18" cx="20" cy="20" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+                    <circle class="progress progress-fuel" id="fuel" stroke="#ce2d2d00" stroke-width="3.5" style="stroke-opacity: 1.0;" fill="transparent" r="18" cx="20" cy="20" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+                </svg>
+            </div>
+            <div class="dials" id="seatbelt" style='background-image: url(img/seatbelt.png)'>
+              <svg class="circle" width="40" height="40">
+                  <circle class="backgroundCircle" stroke="#000000" stroke-width="3.5" style="stroke-opacity: 0.5;" fill="transparent" r="18" cx="20" cy="20" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+                  <circle class="backgroundCircle" id="seatbelt2" stroke="#ce2d2d00" stroke-width="3.5" style="stroke-opacity: 1.0;" fill="transparent" r="18" cx="20" cy="20" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+              </svg>
+            </div>
+        </div>
+          <div class="mapoutline" style="display: none;">
+            <center>
+                <div class="mapborder"></div>
+            </center>
+        </div>
+  </div>
+
+    <div id="cinematic">
+      <div class="top" id="top"></div>
+      <div class="bottom" id="bottom"></div>
+    </div>
+
+    <div class="browser-window-osx" id="drag-browser">
+      <div class="header">
+        <image src="img/cross.png" id="close" height="22" width="22"></image> 
+        <image src="img/reset.png" id="reset" height="20" width="20" ></image>
+        <h3 id="title-hud">HUD SETTINGS</h3> 
+      </div>
+        <div class="window">
+          <div class="background">
+            <div class="test-left">
+              <image src="./img/health.png" alt="Image did not load correctly">
+
+              <label class="switch buttonleft" >
+                <input type="checkbox" id="health-switch" checked>
+                <span class="slider round"></span>
+              </label>
+  
+              <image src="./img/armor.png" alt="Image did not load correctly">
+
+              <label class="switch buttonleft" >
+                <input type="checkbox" id="armor-switch" checked>
+                <span class="slider round"></span>
+              </label>
+
+              <image src="./img/cinematic.png" alt="Image did not load correctly">
+                <label class="switch buttonright2" >
+                  <input type="checkbox" id="cinematic-switch" >
+                  <span class="slider round"></span>
+                </label>
+            </div>
+
+              <div id="hunger-thirst" class="test-right">
+                <image src="./img/hunger.png" alt="Image did not load correctly">
+  
+                <label class="switch buttonleft3" >
+                    <input type="checkbox" id="hunger-switch" checked>
+                    <span class="slider round"></span>
+                </label>
+  
+                <image src="./img/thirst.png" alt="Image did not load correctly">
+  
+                <label class="switch buttoncenter3" >
+                  <input type="checkbox" id="thirst-switch" checked>
+                  <span class="slider round"></span>
+                </label>
+  
+                <image id="stress-show"src="./img/stress.png" alt="Image did not load correctly">
+  
+                <label id="stress-button" class="switch buttoncenter3" >
+                  <input type="checkbox" id="stress-switch" checked>
+                  <span class="slider round"></span>
+                </label> 
+              </div>
+
+            <div class="buttons-center">
+              <button type="button" class="button-left" id="reset-position">Reset position</button>
+              <button type="button" class="button-right" id="reset-color">Reset colors</button>
+            </div>
+
+            <div class="footer-center">
+              <select id="selection">
+                <option class="options" value="health-option" selected>Health</option>
+                <option class="options" value="armor-option">Armor</option>
+                <option id="hunger-option" class="options" value="hunger-option">Hunger</option>
+                <option id="thirst-option" class="options" value="thirst-option">Thirst</option>
+                <option id="stress-option" class="options" value="stress-option">Stress</option>
+              </select>
+
+              <input id="color-block" class="color-block" type="text" value="#ccc" data-wheelcolorpicker="" data-wcp-format="rgba" data-wcp-layout="block" data-wcp-sliders="wsvap" data-wcp-cssclass="color-block" data-wcp-autoresize="true">
+          </div>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
+</html>
